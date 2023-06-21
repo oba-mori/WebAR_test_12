@@ -7,7 +7,7 @@
 	タップしたら表示され、前の物は消える → 移動しているように見せる
 
 	r11:複数種類の3Dモデルを表示(ボタンで切換)
-			(smallはタップした分生成、midiumはタップするごとに移動)
+			(smallはタップした分生成、mediumはタップするごとに移動)
 
 	r12:切替ボタンがARカメラの映像で隠れてしまう、映像の上に重ねたい
 
@@ -291,17 +291,17 @@
 
 
 				// ボタンによる制御
-				// 3Dモデル表示関数無効
+				// 3Dモデル表示関数無効(loadModel2 : medium)
 				const toggleButton = document.getElementById('toggleButton');
 				let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
 				toggleButton.addEventListener('click', () => {
 					if (isEventListenerActive) {
-						controller.removeEventListener('select', loadModel);
+						controller.removeEventListener('select', loadModel2);
 						isEventListenerActive = false;
 						toggleButton.textContent = 'ボタン (無効)';
 					} else {
-						controller.addEventListener('select', loadModel);
+						controller.addEventListener('select', loadModel2);
 						isEventListenerActive = true;
 						toggleButton.textContent = 'ボタン (有効)';
 					}
