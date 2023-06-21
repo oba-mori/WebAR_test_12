@@ -11,7 +11,7 @@ class ARButton {
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
-				overlay.classList.add('overlay_33');
+				overlay.classList.add('overlay_1');
 				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
@@ -222,8 +222,9 @@ class ARButton {
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
-				overlay.classList.add('overlay_4');
+				overlay.classList.add('overlay_2');
 				// overlay.style.display = 'none';
+				overlay.style.display = 'block';
 				document.body.appendChild( overlay );
 
 				const svg = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
@@ -280,7 +281,7 @@ class ARButton {
 				currentSession.removeEventListener( 'end', onSessionEnded );
 
 				button.textContent = 'button_2';
-				sessionInit.domOverlay.root.style.display = 'none';
+				// sessionInit.domOverlay.root.style.display = 'none';
 
 				currentSession = null;
 
@@ -295,7 +296,7 @@ class ARButton {
 			button.style.left = '50px';
 			button.style.width = '100px';
 
-			button.textContent = 'START AR';
+			button.textContent = 'button_2';
 
 			button.onmouseenter = function () {
 
