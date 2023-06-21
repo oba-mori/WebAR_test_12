@@ -11,7 +11,7 @@ class ARButton {
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
-				// overlay.style.display = 'none';
+				overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
 				const svg = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
@@ -68,7 +68,7 @@ class ARButton {
 				currentSession.removeEventListener( 'end', onSessionEnded );
 
 				button.textContent = 'START AR';
-				// sessionInit.domOverlay.root.style.display = 'none';
+				sessionInit.domOverlay.root.style.display = 'none';
 
 				currentSession = null;
 
@@ -157,7 +157,7 @@ class ARButton {
 			element.style.font = 'normal 13px sans-serif';
 			element.style.textAlign = 'center';
 			element.style.opacity = '0.5';
-			// element.style.outline = 'none';
+			element.style.outline = 'none';
 			element.style.zIndex = '999';
 
 		}
@@ -165,7 +165,7 @@ class ARButton {
 		if ( 'xr' in navigator ) {
 
 			button.id = 'ARButton';
-			// button.style.display = 'none';
+			button.style.display = 'none';
 
 			stylizeElement( button );
 
@@ -195,7 +195,7 @@ class ARButton {
 
 			message.style.left = 'calc(50% - 90px)';
 			message.style.width = '180px';
-			// message.style.textDecoration = 'none';
+			message.style.textDecoration = 'none';
 
 			stylizeElement( message );
 

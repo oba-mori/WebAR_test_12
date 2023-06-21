@@ -169,8 +169,10 @@
 
 
 				// ARカメラ起動ボタン
-				document.body.appendChild( ARButton.createButton( renderer, { requiredFeatures: [ 'hit-test' ] } ) );
-
+				// document.body.appendChild( ARButton.createButton( renderer, { requiredFeatures: [ 'hit-test' ] } ) );
+				const button1 = ARButton.createButton(renderer, { requiredFeatures: ['hit-test'] }); // ボタンの生成
+				button1.style.display = 'block';
+				document.body.appendChild(button1); // <body>要素にボタンを追加する
 
 				// テスト
 				// 別のボタン
