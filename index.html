@@ -109,6 +109,7 @@
 
 
 
+
 			let container;
 			let camera, scene, renderer;
 			let controller;
@@ -170,7 +171,13 @@
 				// ARカメラ起動ボタン
 				document.body.appendChild( ARButton.createButton( renderer, { requiredFeatures: [ 'hit-test' ] } ) );
 
-				//
+
+				// テスト
+				// 別のボタン
+				const button2 = ARButton.createButton2(renderer, { requiredFeatures: ['hit-test'] }); // ボタンの生成
+				document.body.appendChild(button2); // <body>要素にボタンを追加する
+
+
 
 				const geometry = new THREE.CylinderGeometry( 0.1, 0.1, 0.2, 32 ).translate( 0, 0.1, 0 );
 
