@@ -11,7 +11,7 @@ class ARButton {
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
-				overlay.classList.add('overlay_3');
+				overlay.classList.add('overlay_33');
 				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
