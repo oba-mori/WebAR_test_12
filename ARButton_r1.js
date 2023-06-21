@@ -3,6 +3,7 @@ class ARButton {
 
 	static createButton( renderer, sessionInit = {} ) {
 
+		// ボタンをbody要素に追加
 		const button = document.createElement( 'button' );
 
 		function showStartAR( /*device*/ ) {
@@ -203,6 +204,13 @@ class ARButton {
 		}
 
 	}
+
+
+
+
+
+	// 追加
+	//２つ目のボタン
 
 }
 
