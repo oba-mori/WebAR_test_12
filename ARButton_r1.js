@@ -11,7 +11,7 @@ class ARButton {
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
-				overlay.classList.add('overlay_1');
+				overlay.classList.add('overlay_3');
 				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
@@ -222,7 +222,7 @@ class ARButton {
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
-				overlay.classList.add('overlay_2');
+				overlay.classList.add('overlay_4');
 				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
