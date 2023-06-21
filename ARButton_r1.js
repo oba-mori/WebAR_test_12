@@ -12,7 +12,7 @@ class ARButton {
 
 				const overlay = document.createElement( 'div' );
 				overlay.classList.add('overlay_1');
-				overlay.style.display = 'none';
+				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
 				const svg = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
@@ -166,7 +166,7 @@ class ARButton {
 		if ( 'xr' in navigator ) {
 
 			button.id = 'ARButton';
-			button.style.display = 'none';
+			// button.style.display = 'none';
 
 			stylizeElement( button );
 
@@ -223,7 +223,7 @@ class ARButton {
 
 				const overlay = document.createElement( 'div' );
 				overlay.classList.add('overlay_2');
-				overlay.style.display = 'none';
+				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
 				const svg = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
@@ -377,7 +377,7 @@ class ARButton {
 		if ( 'xr' in navigator ) {
 
 			button.id = 'ARButton';
-			button.style.display = 'none';
+			// button.style.display = 'none';
 
 			stylizeElement( button );
 
