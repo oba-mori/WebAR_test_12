@@ -15,6 +15,9 @@ class ARButton {
 				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
+				
+
+				// svg要素
 				const svg = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
 				svg.setAttribute( 'width', 38 );
 				svg.setAttribute( 'height', 38 );
@@ -27,6 +30,28 @@ class ARButton {
 
 				} );
 				overlay.appendChild( svg );
+
+
+
+
+
+
+				// ここに新しいsvg要素を追加
+				const secondSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+				secondSvg.setAttribute('width', 38);
+				secondSvg.setAttribute('height', 38);
+				secondSvg.style.position = 'absolute';
+				secondSvg.style.right = '60px';
+				secondSvg.style.top = '20px';
+				secondSvg.addEventListener('click', function() {
+					// クリック時の処理
+				});
+				overlay.appendChild(secondSvg);
+
+
+
+
+
 
 				const path = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
 				path.setAttribute( 'd', 'M 12,12 L 28,28 M 28,12 12,28' );
