@@ -60,7 +60,7 @@ class ARButton {
 				// ここに新しいsvg要素を追加
 				const button_test1 = document.createElement('button');
 				button_test1.classList.add('button_test1');
-				button_test1.textContent = 'Click Me'; // ボタンのテキストを設定
+				button_test1.textContent = 'ボタン (有効)'; // ボタンのテキストを設定
 
 
 				// ボタンにスタイルを適用
@@ -75,12 +75,34 @@ class ARButton {
 				button_test1.style.bottom = '10px';
 
 
+				// ボタンによる制御
+				// 3Dモデル表示関数無効(loadModel2 : medium)
+				let button_syokichi = true;	 	// 初期値をtrueに設定
+
+				button_test1.addEventListener('click', () => {
+					if (button_syokichi) {
+						controller.removeEventListener('select', loadModel2);
+						button_syokichi = false;
+						button_test1.textContent = 'ボタン (無効)';
+					} else {
+						controller.addEventListener('select', loadModel2);
+						button_syokichi = true;
+						button_test1.textContent = 'ボタン (有効)';
+					}
+				});
+
+
+
+
+
+
 				// ボタンがクリックされた時の処理
 				button_test1.addEventListener('click', function() {
 					// ボタンがクリックされた時の動作をここに記述
 
 
 				});
+
 
 				// ボタンをoverlayに追加
 				overlay.appendChild(button_test1);
