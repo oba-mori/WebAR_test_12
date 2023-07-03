@@ -76,6 +76,7 @@ class ARButton {
 
 
 				// ボタンによる制御
+				// ボタンのテキスト表示を切り換え
 				// 3Dモデル表示関数無効(loadModel2 : medium)
 				let button_syokichi = true;	 	// 初期値をtrueに設定
 
