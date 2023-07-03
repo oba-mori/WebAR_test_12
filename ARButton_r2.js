@@ -79,6 +79,8 @@ class ARButton {
 				// ボタンのテキスト表示を切り換え
 				// 3Dモデル表示関数無効(loadModel2 : medium)
 				let button_syokichi = true;	 	// 初期値をtrueに設定
+				
+				let controller = renderer.xr.getController( 0 );
 
 				button_test1.addEventListener('click', () => {
 					if (button_syokichi) {
