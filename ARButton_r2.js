@@ -61,14 +61,17 @@ class ARButton {
 				overlay.classList.add('button_test1');
 				button.textContent = 'Click Me'; // ボタンのテキストを設定
 
-				
+
 				// ボタンにスタイルを適用
 				button_test1.style.backgroundColor = 'blue';
 				button_test1.style.color = 'white';
-				button_test1.style.padding = '10px 20px';
+				button_test1.style.padding = '50px 70px';
 				button_test1.style.border = 'none';
 				button_test1.style.borderRadius = '5px';
 				button_test1.style.cursor = 'pointer';
+				secondSvg.style.position = 'absolute';
+				secondSvg.style.right = '100px';
+				secondSvg.style.top = '100px';
 
 
 				// ボタンがクリックされた時の処理
@@ -77,8 +80,9 @@ class ARButton {
 
 				});
 
-				// ボタンをドキュメントのボディに追加
-				document.body.appendChild(button_test1);
+				// ボタンをoverlayに追加
+				overlay.appendChild(button_test1);
+	
 
 
 
