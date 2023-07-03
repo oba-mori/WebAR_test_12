@@ -11,7 +11,7 @@ class ARButton {
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
-				overlay.classList.add('overlay_1');
+				overlay.classList.add('overlay_20');
 				// overlay.style.display = 'none';
 				document.body.appendChild( overlay );
 
@@ -58,8 +58,8 @@ class ARButton {
 
 				// ここに新しいsvg要素を追加
 				const button_test1 = document.createElement('button');
-				overlay.classList.add('button_test1');
-				button.textContent = 'Click Me'; // ボタンのテキストを設定
+				button_test1.classList.add('button_test1');
+				button_test1.textContent = 'Click Me'; // ボタンのテキストを設定
 
 
 				// ボタンにスタイルを適用
@@ -75,7 +75,7 @@ class ARButton {
 
 
 				// ボタンがクリックされた時の処理
-				button.addEventListener('click', function() {
+				button_test1.addEventListener('click', function() {
 					// ボタンがクリックされた時の動作をここに記述
 
 				});
