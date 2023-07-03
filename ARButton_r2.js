@@ -39,17 +39,18 @@ class ARButton {
 
 
 
-				// ここに新しいsvg要素を追加
-				const secondSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-				secondSvg.setAttribute('width', 38);
-				secondSvg.setAttribute('height', 38);
-				secondSvg.style.position = 'absolute';
-				secondSvg.style.right = '60px';
-				secondSvg.style.top = '20px';
-				secondSvg.addEventListener('click', function() {
-					// クリック時の処理
-				});
-				overlay.appendChild(secondSvg);
+				// // ここに新しいsvg要素を追加
+				// const secondSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+				// secondSvg.setAttribute('width', 38);
+				// secondSvg.setAttribute('height', 38);
+				// secondSvg.style.position = 'absolute';
+				// secondSvg.style.right = '60px';
+				// secondSvg.style.top = '20px';
+				// secondSvg.addEventListener('click', function() {
+				// 	// クリック時の処理
+				// });
+				// overlay.appendChild(secondSvg);
+
 
 
 
@@ -63,20 +64,21 @@ class ARButton {
 
 
 				// ボタンにスタイルを適用
-				button_test1.style.backgroundColor = 'blue';
-				button_test1.style.color = 'white';
-				button_test1.style.padding = '50px 70px';
+				button_test1.style.backgroundColor = 'white';
+				button_test1.style.color = 'black';
+				button_test1.style.padding = '10px 10px';
 				button_test1.style.border = 'none';
 				button_test1.style.borderRadius = '5px';
 				button_test1.style.cursor = 'pointer';
-				secondSvg.style.position = 'absolute';
-				secondSvg.style.right = '100px';
-				secondSvg.style.top = '100px';
+				button_test1.style.position = 'absolute';
+				button_test1.style.right = '10px';
+				button_test1.style.bottom = '10px';
 
 
 				// ボタンがクリックされた時の処理
 				button_test1.addEventListener('click', function() {
 					// ボタンがクリックされた時の動作をここに記述
+
 
 				});
 
