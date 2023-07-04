@@ -304,3 +304,5 @@ import { ARButton } from './ARButton_r2.js';
 				renderer.render( scene, camera );
 
 			}
+
+			export { loadModel2 };
