@@ -298,4 +298,4 @@ class ARButton {
 	}
 }
 
-export { ARButton };
+export { ARButton, loadModel2_display };
