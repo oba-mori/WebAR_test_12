@@ -1,4 +1,8 @@
 // r1
+
+import { loadModel2 } from './main_seigyo.js';
+
+
 class ARButton {
 
 	static createButton( renderer, sessionInit = {} ) {
