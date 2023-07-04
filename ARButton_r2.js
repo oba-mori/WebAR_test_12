@@ -79,6 +79,7 @@ class ARButton {
 				// ボタンのテキスト表示を切り換え
 				// 3Dモデル表示関数無効(loadModel2 : medium)
 				let button_syokichi = true;	 	// 初期値をtrueに設定
+				let loadModel2_display = true;	//モデル2の表示(初期値をtrueに設定)
 				
 				button_test1.addEventListener('click', () => {
 					if (button_syokichi) {
@@ -86,11 +87,13 @@ class ARButton {
 						button_syokichi = false;
 						button_test1.textContent = 'ボタン (無効)';
 
+						loadModel2_display = false;
 					} else {
 						// controller.addEventListener('select', loadModel2);
 						button_syokichi = true;
-						button_test1.textContent = 'ボタン (有効)';
-
+						button_test1.textContent = 'ボタン (有効)'
+						
+						loadModel2_display = true;
 					}
 				});
 
