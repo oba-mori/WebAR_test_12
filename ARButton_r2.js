@@ -1,10 +1,13 @@
-// r1
+// r2
+
+//追加
+var loadModel2_display = true;	//モデル2の表示(初期値をtrueに設定)
+
+
 class ARButton {
 
 	static createButton( renderer, sessionInit = {} ) {
 
-		//追加
-		var loadModel2_display = true;	//モデル2の表示(初期値をtrueに設定)
 
 
 		// ボタンをbody要素に追加
@@ -303,4 +306,4 @@ class ARButton {
 	}
 }
 
-export { ARButton };
+export { ARButton, loadModel2_display};
