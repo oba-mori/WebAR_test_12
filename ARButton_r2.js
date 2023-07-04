@@ -1,8 +1,4 @@
 // r1
-
-import { loadModel2 } from './main_seigyo.js';
-
-
 class ARButton {
 
 	static createButton( renderer, sessionInit = {} ) {
@@ -84,17 +80,17 @@ class ARButton {
 				// 3Dモデル表示関数無効(loadModel2 : medium)
 				let button_syokichi = true;	 	// 初期値をtrueに設定
 				
-				let controller = renderer.xr.getController( 0 );
-
 				button_test1.addEventListener('click', () => {
 					if (button_syokichi) {
-						controller.removeEventListener('select', loadModel2);
+						// controller.removeEventListener('select', loadModel2);
 						button_syokichi = false;
 						button_test1.textContent = 'ボタン (無効)';
+
 					} else {
-						controller.addEventListener('select', loadModel2);
+						// controller.addEventListener('select', loadModel2);
 						button_syokichi = true;
 						button_test1.textContent = 'ボタン (有効)';
+
 					}
 				});
 
