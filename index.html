@@ -253,8 +253,6 @@
 
 				// 新しく3Dモデルを表示する際、表示済みの3Dモデルを消す
 				function loadModel2() {
-					console.log("html_loadModel2_display : " + loadModel2_display);
-
 					if (currentModel2) scene.remove(currentModel2); // 既存のモデルを削除
 
 					const loader = new GLTFLoader();
@@ -300,22 +298,25 @@
 				
 
 
-				// // ボタンによる制御
-				// // 3Dモデル表示関数無効(loadModel2 : medium)
-				// const toggleButton = document.getElementById('toggleButton');
-				// let isEventListenerActive = true;	 	// 初期値をtrueに設定
+				// ボタンによる制御
+				// 3Dモデル表示関数無効(loadModel2 : medium)
+				const toggleButton = document.getElementById('toggleButton');
+				let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
-				// toggleButton.addEventListener('click', () => {
-				// 	if (isEventListenerActive) {
-				// 		controller.removeEventListener('select', loadModel2);
-				// 		isEventListenerActive = false;
-				// 		toggleButton.textContent = 'ボタン (無効)';
-				// 	} else {
-				// 		controller.addEventListener('select', loadModel2);
-				// 		isEventListenerActive = true;
-				// 		toggleButton.textContent = 'ボタン (有効)';
-				// 	}
-				// });
+				toggleButton.addEventListener('click', () => {
+					console.log("html_loadModel2_display : " + loadModel2_display);
+
+
+					if (isEventListenerActive) {
+						controller.removeEventListener('select', loadModel2);
+						isEventListenerActive = false;
+						toggleButton.textContent = 'ボタン (無効)';
+					} else {
+						controller.addEventListener('select', loadModel2);
+						isEventListenerActive = true;
+						toggleButton.textContent = 'ボタン (有効)';
+					}
+				});
 
 
 
@@ -325,11 +326,11 @@
 				if (loadModel2_display)
 				{
 					// true = 有効
-					controller.addEventListener('select', loadModel2);					
+					// controller.addEventListener('select', loadModel2);
 				}
 				else
 				{
-					controller.removeEventListener('select', loadModel2);
+					// controller.removeEventListener('select', loadModel2);
 				}
 
 
