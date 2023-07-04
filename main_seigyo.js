@@ -7,6 +7,8 @@ export {}; // モジュールとして宣言
 
 
 import * as THREE from 'three';
+import { GLTFLoader } from './GLTFLoader.js';
+import { ARButton } from './ARButton_r2.js';
 
 
 			let container;
