@@ -6,6 +6,7 @@ export {}; // モジュールとして宣言
 // ここにTHREEを使用するコードを記述する
 
 
+import * as THREE from 'three';
 
 
 			let container;
