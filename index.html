@@ -319,19 +319,17 @@
 				// ARButtonクラスのインスタンスを作成
 				const arButton = new ARButton();
 
-				// loadModel2_displayプロパティにアクセス
-				console.log(arButton.loadModel2_display);
 				
 
-				// // ARButton_r2.jsファイルの変数で制御
-				// if (loadModel2_display)
-				// {
-				// 	controller.removeEventListener('select', loadModel2);
-				// }
-				// else
-				// {
-				// 	controller.addEventListener('select', loadModel2);
-				// }
+				// ARButton_r2.jsファイルの変数で制御
+				if (loadModel2_display)
+				{
+					controller.removeEventListener('select', loadModel2);
+				}
+				else
+				{
+					controller.addEventListener('select', loadModel2);
+				}
 
 
 
