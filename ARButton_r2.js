@@ -95,12 +95,20 @@ class ARButton {
 						button_test1.textContent = 'ボタン (無効)';
 
 						loadModel2_display = false;
+						console.log("button_syokichi : " + button_syokichi);
+
+						bar = "mukou";
+						console.log("bar : " + bar);
 					} else {
 						// controller.addEventListener('select', loadModel2);
 						button_syokichi = true;
 						button_test1.textContent = 'ボタン (有効)'
 						
 						loadModel2_display = true;
+						console.log("button_syokichi : " + button_syokichi);
+
+						bar = "yukou";
+						console.log("bar : " + bar);
 					}
 				});
 
