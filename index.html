@@ -305,6 +305,7 @@
 
 				toggleButton.addEventListener('click', () => {
 					console.log("html_loadModel2_display : " + loadModel2_display);
+					console.log("bar : " + bar);
 
 
 					if (isEventListenerActive) {
@@ -322,25 +323,21 @@
 
 				
 
-				// // ARButton_r2.jsファイルの変数で制御
-				// if (loadModel2_display == true)
-				// {
-				// 	// true = 有効
-				// 	controller.addEventListener('select', loadModel2);
-				// 	console.log("html_loadModel2_display_22 : " + loadModel2_display);
-				// 	console.log("true!!");
-				// }
-				// else
-				// {
-				// 	controller.removeEventListener('select', loadModel2);
-				// 	console.log("html_loadModel2_display_22 : " + loadModel2_display);
-				// 	console.log("false!!");
-				// }
+				// ARButton_r2.jsファイルの変数で制御
+				if (loadModel2_display == true)
+				{
+					// true = 有効
+					controller.addEventListener('select', loadModel2);
+				}
+				else
+				{
+					controller.removeEventListener('select', loadModel2);
+				}
 
 
 
 				// ARButton_r2.jsファイルの変数で制御
-				if (bar == "yukou")
+				if (bar == 'yukou')
 				{
 					// true = 有効
 					controller.addEventListener('select', loadModel2);
