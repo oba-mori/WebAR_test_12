@@ -112,18 +112,19 @@ class ARButton {
 					}
 				});
 
-				console.log(foo);
+
+				console.log("foo : " + foo);
 
 
 
 
 
-				// ボタンがクリックされた時の処理
-				button_test1.addEventListener('click', function() {
-					// ボタンがクリックされた時の動作をここに記述
+				// // ボタンがクリックされた時の処理
+				// button_test1.addEventListener('click', function() {
+				// 	// ボタンがクリックされた時の動作をここに記述
 
 
-				});
+				// });
 
 
 				// ボタンをoverlayに追加

@@ -111,7 +111,7 @@
 			// import { ARButton } from './ARButton.js';
 			import { ARButton } from './ARButton_r2.js';
 			import { loadModel2_display } from './ARButton_r2.js';
-			console.log(loadModel2_display);
+			console.log("loadModel2_display : " + loadModel2_display);
 
 
 
@@ -253,6 +253,8 @@
 
 				// 新しく3Dモデルを表示する際、表示済みの3Dモデルを消す
 				function loadModel2() {
+					console.log("html_button_syokichi : " + button_syokichi);
+
 					if (currentModel2) scene.remove(currentModel2); // 既存のモデルを削除
 
 					const loader = new GLTFLoader();
@@ -316,11 +318,6 @@
 				// });
 
 
-
-
-
-				// ARButtonクラスのインスタンスを作成
-				const arButton = new ARButton();
 
 				
 
