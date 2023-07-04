@@ -73,10 +73,13 @@
 		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
     
 
+
 		<script>
 			var foo = 'foo';
 			var bar = 'bar';
 		</script>
+
+
 
 		<!--  importmapと一緒に使用し、three.module.jsをimportするため -->
 		<script type="importmap">
@@ -295,22 +298,22 @@
 				
 
 
-				// ボタンによる制御
-				// 3Dモデル表示関数無効(loadModel2 : medium)
-				const toggleButton = document.getElementById('toggleButton');
-				let isEventListenerActive = true;	 	// 初期値をtrueに設定
+				// // ボタンによる制御
+				// // 3Dモデル表示関数無効(loadModel2 : medium)
+				// const toggleButton = document.getElementById('toggleButton');
+				// let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
-				toggleButton.addEventListener('click', () => {
-					if (isEventListenerActive) {
-						controller.removeEventListener('select', loadModel2);
-						isEventListenerActive = false;
-						toggleButton.textContent = 'ボタン (無効)';
-					} else {
-						controller.addEventListener('select', loadModel2);
-						isEventListenerActive = true;
-						toggleButton.textContent = 'ボタン (有効)';
-					}
-				});
+				// toggleButton.addEventListener('click', () => {
+				// 	if (isEventListenerActive) {
+				// 		controller.removeEventListener('select', loadModel2);
+				// 		isEventListenerActive = false;
+				// 		toggleButton.textContent = 'ボタン (無効)';
+				// 	} else {
+				// 		controller.addEventListener('select', loadModel2);
+				// 		isEventListenerActive = true;
+				// 		toggleButton.textContent = 'ボタン (有効)';
+				// 	}
+				// });
 
 
 
