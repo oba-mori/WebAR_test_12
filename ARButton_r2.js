@@ -97,6 +97,7 @@ class ARButton {
 					}
 				});
 
+				console.log(foo);
 
 
 
@@ -298,4 +299,4 @@ class ARButton {
 	}
 }
 
-export { ARButton, loadModel2_display };
+export { ARButton };
