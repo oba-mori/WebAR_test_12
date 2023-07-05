@@ -1,5 +1,7 @@
 // r2
 
+import { text } from './main.js';
+
 //追加
 var loadModel2_display = true;	//モデル2の表示(初期値をtrueに設定)
 
@@ -114,25 +116,38 @@ class ARButton {
 				// 	}					
 				// });
 
+
+				button_test1.addEventListener('click', () => {
+					if (text === 'Hello') {
+						text = 'World';
+					} else {
+						text = 'Hello';
+					}
+					console.log('text:', text);
+				});
 				
 
-				// Aファイル
 
-				let bar = 'yuko'; // 初期値を設定
 
-				// ボタンクリック時の処理
-				button_test1.addEventListener('click', () => {
-					if (bar === 'yuko') {
-						bar = 'muko'; // barの値を変更
-						console.log('bar : ' + bar);
-					} else {
-						bar = 'yuko'; // barの値を変更
-						console.log('bar : ' + bar);
-					}
+				
 
-					// barの値を別ファイルのコードに伝える
-					updateBar(bar);
-				});
+				// // Aファイル
+
+				// let bar = 'yuko'; // 初期値を設定
+
+				// // ボタンクリック時の処理
+				// button_test1.addEventListener('click', () => {
+				// 	if (bar === 'yuko') {
+				// 		bar = 'muko'; // barの値を変更
+				// 		console.log('bar : ' + bar);
+				// 	} else {
+				// 		bar = 'yuko'; // barの値を変更
+				// 		console.log('bar : ' + bar);
+				// 	}
+
+				// 	// barの値を別ファイルのコードに伝える
+				// 	updateBar(bar);
+				// });
 
 
 
