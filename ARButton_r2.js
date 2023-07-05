@@ -82,6 +82,8 @@ class ARButton {
 				button_test1.style.bottom = '10px';
 
 
+				
+
 				// ボタンによる制御
 				// ボタンのテキスト表示を切り換え
 				// 3Dモデル表示関数無効(loadModel2 : medium)
@@ -109,14 +111,7 @@ class ARButton {
 
 						bar = "yuko";
 						console.log("bar : " + bar);
-					}
-
-
-
-
-
-
-					
+					}					
 				});
 
 

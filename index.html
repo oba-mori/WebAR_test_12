@@ -338,21 +338,47 @@
 
 
 
-				// ARButton_r2.jsファイルの変数で制御
-				if (bar == 'yuko')
-				{
-					// true = 有効
-					controller.addEventListener('select', loadModel2);
+				// // ARButton_r2.jsファイルの変数で制御
+				// if (bar == 'yuko')
+				// {
+				// 	// true = 有効
+				// 	controller.addEventListener('select', loadModel2);
 
-					toggleButton.textContent = 'ボタン (有効)';
+				// 	toggleButton.textContent = 'ボタン (有効)';
+				// }
+				// else
+				// {
+				// 	controller.removeEventListener('select', loadModel2);
+
+				// 	toggleButton.textContent = 'ボタン (無効)';
+				// }
+
+
+
+				// テスト
+				// Bファイル
+
+				// barの値が更新されたときに制御を行う
+				function handleBarUpdate(event) {
+					const value = event.detail;
+					if (value === 'yuko') {
+						controller.addEventListener('select', loadModel2);
+						toggleButton.textContent = 'ボタン (有効)';
+
+						console.log("value : " + value);
+					} else {
+						controller.removeEventListener('select', loadModel2);
+						toggleButton.textContent = 'ボタン (無効)';
+
+						console.log("value : " + value);
+					}
 				}
-				else
-				{
-					controller.removeEventListener('select', loadModel2);
 
-					toggleButton.textContent = 'ボタン (無効)';
-				}
+				// barの更新イベントを受け取るためのリスナーを追加
+				document.addEventListener('barUpdated', handleBarUpdate);
 
+
+		
 
 
 
