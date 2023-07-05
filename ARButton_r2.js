@@ -97,7 +97,7 @@ class ARButton {
 						loadModel2_display = false;
 						console.log("button_syokichi : " + button_syokichi);
 
-						bar = "mukou";
+						bar = "muko";
 						console.log("bar : " + bar);
 					} else {
 						// controller.addEventListener('select', loadModel2);
@@ -107,13 +107,18 @@ class ARButton {
 						loadModel2_display = true;
 						console.log("button_syokichi : " + button_syokichi);
 
-						bar = "yukou";
+						bar = "yuko";
 						console.log("bar : " + bar);
 					}
+
+
+
+
+
+
+					
 				});
 
-
-				console.log("foo : " + foo);
 
 
 

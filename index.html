@@ -312,12 +312,12 @@
 						// controller.removeEventListener('select', loadModel2);
 						isEventListenerActive = false;
 						toggleButton.textContent = 'ボタン (無効)';
-						bar = 'mukou'
+						bar = 'muko'
 					} else {
 						// controller.addEventListener('select', loadModel2);
 						isEventListenerActive = true;
 						toggleButton.textContent = 'ボタン (有効)';
-						bar = 'yukou'
+						bar = 'yuko'
 					}
 				});
 
@@ -339,7 +339,7 @@
 
 
 				// ARButton_r2.jsファイルの変数で制御
-				if (bar == 'yukou')
+				if (bar == 'yuko')
 				{
 					// true = 有効
 					controller.addEventListener('select', loadModel2);
