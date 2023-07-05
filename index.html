@@ -311,13 +311,13 @@
 					if (isEventListenerActive) {
 						// controller.removeEventListener('select', loadModel2);
 						isEventListenerActive = false;
-						toggleButton.textContent = 'ボタン (無効)';
-						bar = 'muko'
+						// toggleButton.textContent = 'ボタン (無効)';
+						// bar = 'muko'
 					} else {
 						// controller.addEventListener('select', loadModel2);
 						isEventListenerActive = true;
-						toggleButton.textContent = 'ボタン (有効)';
-						bar = 'yuko'
+						// toggleButton.textContent = 'ボタン (有効)';
+						// bar = 'yuko'
 					}
 				});
 
@@ -343,10 +343,14 @@
 				{
 					// true = 有効
 					controller.addEventListener('select', loadModel2);
+
+					toggleButton.textContent = 'ボタン (有効)';
 				}
 				else
 				{
 					controller.removeEventListener('select', loadModel2);
+
+					toggleButton.textContent = 'ボタン (無効)';
 				}
 
 
