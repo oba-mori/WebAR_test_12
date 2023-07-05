@@ -76,7 +76,7 @@
 
 		<script>
 			var foo = 'foo';
-			var bar = 'bar';
+			// var bar = 'bar';
 		</script>
 
 
@@ -355,30 +355,53 @@
 
 
 
-				// テスト
-				// Bファイル
+				// // テスト
+				// // Bファイル
 
-				// barの値が更新されたときに制御を行う
-				function handleBarUpdate(event) {
-					const value = event.detail;
-					if (value === 'yuko') {
-						controller.addEventListener('select', loadModel2);
-						toggleButton.textContent = 'ボタン (有効)';
+				// // barの値が更新されたときに制御を行う
+				// function handleBarUpdate(event) {
+				// 	const value = event.detail;
+				// 	if (value === 'yuko') {
+				// 		controller.addEventListener('select', loadModel2);
+				// 		toggleButton.textContent = 'ボタン (有効)';
 
-						console.log("value : " + value);
-					} else {
-						controller.removeEventListener('select', loadModel2);
-						toggleButton.textContent = 'ボタン (無効)';
+				// 		console.log("value : " + value);
+				// 	} else {
+				// 		controller.removeEventListener('select', loadModel2);
+				// 		toggleButton.textContent = 'ボタン (無効)';
 
-						console.log("value : " + value);
-					}
-				}
+				// 		console.log("value : " + value);
+				// 	}
+				// }
 
-				// barの更新イベントを受け取るためのリスナーを追加
-				document.addEventListener('barUpdated', handleBarUpdate);
+				// // barの更新イベントを受け取るためのリスナーを追加
+				// document.addEventListener('barUpdated', handleBarUpdate);
 
 
 		
+
+// テスト
+// Bファイル
+
+// 別ファイルの制御も行うための関数
+function handleBarChange(value) {
+  if (value === 'yuko') {
+    controller.addEventListener('select', loadModel2);
+    toggleButton.textContent = 'ボタン (有効)';
+  } else {
+    controller.removeEventListener('select', loadModel2);
+    toggleButton.textContent = 'ボタン (無効)';
+  }
+}
+
+// barの値の変更を受け取るための関数を登録
+function updateBar(bar) {
+  handleBarChange(bar);
+}
+
+
+
+
 
 
 

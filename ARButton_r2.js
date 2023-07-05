@@ -82,7 +82,7 @@ class ARButton {
 				button_test1.style.bottom = '10px';
 
 
-				
+
 
 				// ボタンによる制御
 				// ボタンのテキスト表示を切り換え
@@ -90,29 +90,50 @@ class ARButton {
 				let button_syokichi = true;	 	// 初期値をtrueに設定
 		
 				
-				button_test1.addEventListener('click', () => {
-					if (button_syokichi) {
-						// controller.removeEventListener('select', loadModel2);
-						button_syokichi = false;
-						button_test1.textContent = 'ボタン (無効)';
+				// button_test1.addEventListener('click', () => {
+				// 	if (button_syokichi) {
+				// 		// controller.removeEventListener('select', loadModel2);
+				// 		button_syokichi = false;
+				// 		button_test1.textContent = 'ボタン (無効)';
 
-						loadModel2_display = false;
-						console.log("button_syokichi : " + button_syokichi);
+				// 		loadModel2_display = false;
+				// 		console.log("button_syokichi : " + button_syokichi);
 
-						bar = "muko";
-						console.log("bar : " + bar);
-					} else {
-						// controller.addEventListener('select', loadModel2);
-						button_syokichi = true;
-						button_test1.textContent = 'ボタン (有効)'
+				// 		bar = "muko";
+				// 		console.log("bar : " + bar);
+				// 	} else {
+				// 		// controller.addEventListener('select', loadModel2);
+				// 		button_syokichi = true;
+				// 		button_test1.textContent = 'ボタン (有効)'
 						
-						loadModel2_display = true;
-						console.log("button_syokichi : " + button_syokichi);
+				// 		loadModel2_display = true;
+				// 		console.log("button_syokichi : " + button_syokichi);
 
-						bar = "yuko";
-						console.log("bar : " + bar);
-					}					
+				// 		bar = "yuko";
+				// 		console.log("bar : " + bar);
+				// 	}					
+				// });
+
+				
+
+				// Aファイル
+
+				let bar = 'yuko'; // 初期値を設定
+
+				// ボタンクリック時の処理
+				button_test1.addEventListener('click', () => {
+					if (bar === 'yuko') {
+						bar = 'muko'; // barの値を変更
+						console.log('bar : ' + bar);
+					} else {
+						bar = 'yuko'; // barの値を変更
+						console.log('bar : ' + bar);
+					}
+
+					// barの値を別ファイルのコードに伝える
+					updateBar(bar);
 				});
+
 
 
 
