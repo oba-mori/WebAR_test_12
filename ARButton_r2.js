@@ -1,6 +1,5 @@
 // r2
 
-import { text } from './main.js';
 
 //追加
 var loadModel2_display = true;	//モデル2の表示(初期値をtrueに設定)
