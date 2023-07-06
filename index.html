@@ -102,7 +102,7 @@
 			import { GLTFLoader } from './GLTFLoader.js';
 
 			// import { ARButton } from 'three/addons/webxr/ARButton.js';
-			import { ARButton } from './ARButton_r3.js';
+			import { ARButton } from './ARButton_r4.js';
 
 
 
@@ -296,6 +296,21 @@
 						toggleButton.textContent = 'ボタン (有効)';
 					}
 				});
+
+
+
+
+				// 追加テスト
+				const { setValueChangedCallback } = ARButton.createButton();
+
+				// コールバック関数を設定
+				setValueChangedCallback((value) => {
+					console.log('button_seigyo:', value);
+				});
+
+
+
+
 
 
 
