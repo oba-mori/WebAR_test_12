@@ -56,17 +56,16 @@ class ARButton {
 
 			
 
-
+				var button_seigyo = 0;
 				button_test1.addEventListener('click', () => {
-					if (text === 'Hello') {
-						text = 'World';						
+					if (button_seigyo == 0) {
+						button_seigyo = 1;						
 						button_test1.textContent = 'ボタン (無効)'
 					} else {
-						text = 'Hello';
+						button_seigyo = 0;
 						button_test1.textContent = 'ボタン (有効)'
 					}
-					console.log('text:', text);
-					alert("text: " + text);
+					console.log('button_seigyo:', button_seigyo);
 				});
 				
 
