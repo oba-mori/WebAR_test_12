@@ -172,17 +172,11 @@ class ARButton {
 		}
 
 
-    // コールバック関数を外部から設定するための関数
-    function setValueChangedCallback(callback) {
-      valueChangedCallback = callback;
-    }
 
-    // // 外部ファイルからコールバック関数を設定するためにエクスポート
-    // return { setValueChangedCallback };
-
-
-
-
+ // コールバック関数を外部から設定するための関数
+ function setValueChangedCallback(callback) {
+	valueChangedCallback = callback;
+}
 
 		function disableButton() {
 
@@ -247,7 +241,13 @@ class ARButton {
 
 			} ).catch( showARNotAllowed );
 
-			return button;
+			// return button;
+			    // 他の値を追加する場合は、オブジェクトリテラルに追加
+					return {
+						setValueChangedCallback,
+						// 他の返り値を追加
+						button
+					};
 
 		} else {
 
