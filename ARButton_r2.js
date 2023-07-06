@@ -182,16 +182,16 @@ class ARButton {
 
 
 
-				  // クラスのインスタンスを作成
-					const arButton = new ARButton();
+				  // // クラスのインスタンスを作成
+					// const arButton = new ARButton();
 
-					// クラスのメソッドを呼び出す
-					arButton.incrementValue();
+					// // クラスのメソッドを呼び出す
+					// arButton.incrementValue();
 
-					// 
-					arButton.addValueChangedCallback();
+					// // 
+					// arButton.addValueChangedCallback();
 
-					arButton.dispatchValueChangedEvent();
+					// arButton.dispatchValueChangedEvent();
 					
 
 
