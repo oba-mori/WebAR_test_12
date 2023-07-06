@@ -116,35 +116,42 @@ class ARButton {
 				// });
 
 
+				this.x = 0; // クラスのプロパティとして変数を定義
 				button_test1.addEventListener('click', () => {
-					// B.js
-					// Aファイルで定義した関数を使用して変数の変更を通知する
-					receiveVariableChange(20);
-
-
 					if (text === 'Hello') {
 						text = 'World';						
 						button_test1.textContent = 'ボタン (無効)'
 
-
-
-											// B.js
-						// Aファイルで定義した関数を使用して変数の変更を通知する
-						receiveVariableChange(20);
+						this.x = 10;
 					} else {
 						text = 'Hello';
 						button_test1.textContent = 'ボタン (有効)'
 
-
-											// B.js
-						// Aファイルで定義した関数を使用して変数の変更を通知する
-						receiveVariableChange(50);
+						this.x = 2;
 					}
 					console.log('text:', text);
+					console.log('B_this.x:', this.x);
 					alert("text: " + text);
 				});
 				
 
+
+
+
+
+				constructor() {
+					this.x = 0;
+				}
+				
+				handleButtonClick() {
+					// xの値を切り替える処理
+					this.x = (this.x === 0) ? 1 : 0;
+					console.log("xの値が切り替わりました:", this.x);
+				}
+
+				button_test1.addEventListener('click', () => {
+					this.handleButtonClick();
+				});
 
 
 				
