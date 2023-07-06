@@ -123,6 +123,7 @@ class ARButton {
 						text = 'Hello';
 					}
 					console.log('text:', text);
+					alert("text: " + text);
 				});
 				
 
