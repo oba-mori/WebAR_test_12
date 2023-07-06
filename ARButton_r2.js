@@ -136,21 +136,14 @@ class ARButton {
 				
 
 
-
-
-
-				constructor() {
-					this.x = 0;
-				}
 				
-				handleButtonClick() {
+				
+					
+				button_test1.addEventListener('click', () => {
 					// xの値を切り替える処理
 					this.x = (this.x === 0) ? 1 : 0;
-					console.log("xの値が切り替わりました:", this.x);
-				}
+					console.log("xの値が切り替わりました:", this.x);				
 
-				button_test1.addEventListener('click', () => {
-					this.handleButtonClick();
 				});
 
 
