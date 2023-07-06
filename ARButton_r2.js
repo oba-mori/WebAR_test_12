@@ -163,10 +163,6 @@ class ARButton {
 
 
 
-
-
-
-
 				// テスト
 				// 追加
 
@@ -183,38 +179,20 @@ class ARButton {
 				});
 
 
-				//クリックした時にこの関数が処理される
-				//変数値を変更する関数
-				function incrementValue() {
-					if (this.value == 0)
-					{
-						this.value = 1;
-					}
-					else
-					{
-						this.value = 0;
-					}
-				}
-
-				// 値が変更された時に実行したい関数を配列に登録する
-				function addValueChangedCallback(callback) {
-					this.valueChangedCallbacks.push(callback);
-				}
-
-				// 値の変更を検知し、登録されたコール関数に通知するためのもの
-				// ボタンをクリックすると実行される
-				// 変数valueに配列valueChangedCallbacksに入っている値を入れる
-				// そうすることで、最新の値をvalueに入れることが出来る
-				function dispatchValueChangedEvent() {
-					for (const callback of this.valueChangedCallbacks) {
-						callback(this.value);
-					}
-				}
 
 
 
+				  // クラスのインスタンスを作成
+					const arButton = new ARButton();
 
+					// クラスのメソッドを呼び出す
+					arButton.incrementValue();
 
+					// 
+					arButton.addValueChangedCallback();
+
+					arButton.dispatchValueChangedEvent();
+					
 
 
 
@@ -433,18 +411,48 @@ class ARButton {
 				}
 
 
-
-
-
-
-
-
-
-
-
-
-
 	}
+
+
+
+
+				
+		
+				
+
+
+				//クリックした時にこの関数が処理される
+				//変数値を変更する関数
+				incrementValue() {
+					if (this.value == 0)
+					{
+						this.value = 1;
+					}
+					else
+					{
+						this.value = 0;
+					}
+				}
+
+				// 値が変更された時に実行したい関数を配列に登録する
+				addValueChangedCallback(callback) {
+					this.valueChangedCallbacks.push(callback);
+				}
+
+				// 値の変更を検知し、登録されたコール関数に通知するためのもの
+				// ボタンをクリックすると実行される
+				// 変数valueに配列valueChangedCallbacksに入っている値を入れる
+				// そうすることで、最新の値をvalueに入れることが出来る
+				dispatchValueChangedEvent() {
+					for (const callback of this.valueChangedCallbacks) {
+						callback(this.value);
+					}
+				}
+
+
+
+
+
 }
 
 export { ARButton, loadModel2_display};
