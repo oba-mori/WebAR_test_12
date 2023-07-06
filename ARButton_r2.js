@@ -118,9 +118,11 @@ class ARButton {
 
 				button_test1.addEventListener('click', () => {
 					if (text === 'Hello') {
-						text = 'World';
+						text = 'World';						
+						button_test1.textContent = 'ボタン (無効)'
 					} else {
 						text = 'Hello';
+						button_test1.textContent = 'ボタン (有効)'
 					}
 					console.log('text:', text);
 					alert("text: " + text);
