@@ -140,43 +140,23 @@ class ARButton {
 				
 				
 
-				// // Aファイル
-
-				// let bar = 'yuko'; // 初期値を設定
-
-				// // ボタンクリック時の処理
-				// button_test1.addEventListener('click', () => {
-				// 	if (bar === 'yuko') {
-				// 		bar = 'muko'; // barの値を変更
-				// 		console.log('bar : ' + bar);
-				// 	} else {
-				// 		bar = 'yuko'; // barの値を変更
-				// 		console.log('bar : ' + bar);
-				// 	}
-
-				// 	// barの値を別ファイルのコードに伝える
-				// 	updateBar(bar);
-				// });
-
-
-
 
 
 
 				// テスト
 				// 追加
 
-				// ボタンクリックイベント
-				button_test1.addEventListener('click', () => {
-					//変数値を変更する関数
-					this.incrementValue();
+				// // ボタンクリックイベント
+				// button_test1.addEventListener('click', () => {
+				// 	//変数値を変更する関数
+				// 	this.incrementValue();
 
-					//表示
-					console.log('ボタンクリック後の値:', this.value);
+				// 	//表示
+				// 	console.log('ボタンクリック後の値:', this.value);
 
-					// 値の変更を検知し、登録されたコール関数に通知するためのもの
-					this.dispatchValueChangedEvent();
-				});
+				// 	// 値の変更を検知し、登録されたコール関数に通知するためのもの
+				// 	this.dispatchValueChangedEvent();
+				// });
 
 
 
@@ -400,15 +380,6 @@ class ARButton {
 		}
 
 
-				// 値の変更を検知し、登録されたコール関数に通知するためのもの
-				// ボタンをクリックすると実行される
-				// 変数valueに配列valueChangedCallbacksに入っている値を入れる
-				// そうすることで、最新の値をvalueに入れることが出来る
-				function dispatchValueChangedEvent() {
-					for (const callback of this.valueChangedCallbacks) {
-						callback(this.value);
-					}
-				}
 
 
 	}
@@ -421,33 +392,33 @@ class ARButton {
 				
 
 
-				//クリックした時にこの関数が処理される
-				//変数値を変更する関数
-				incrementValue() {
-					if (this.value == 0)
-					{
-						this.value = 1;
-					}
-					else
-					{
-						this.value = 0;
-					}
-				}
+				// //クリックした時にこの関数が処理される
+				// //変数値を変更する関数
+				// incrementValue() {
+				// 	if (this.value == 0)
+				// 	{
+				// 		this.value = 1;
+				// 	}
+				// 	else
+				// 	{
+				// 		this.value = 0;
+				// 	}
+				// }
 
-				// 値が変更された時に実行したい関数を配列に登録する
-				addValueChangedCallback(callback) {
-					this.valueChangedCallbacks.push(callback);
-				}
+				// // 値が変更された時に実行したい関数を配列に登録する
+				// addValueChangedCallback(callback) {
+				// 	this.valueChangedCallbacks.push(callback);
+				// }
 
-				// 値の変更を検知し、登録されたコール関数に通知するためのもの
-				// ボタンをクリックすると実行される
-				// 変数valueに配列valueChangedCallbacksに入っている値を入れる
-				// そうすることで、最新の値をvalueに入れることが出来る
-				dispatchValueChangedEvent() {
-					for (const callback of this.valueChangedCallbacks) {
-						callback(this.value);
-					}
-				}
+				// // 値の変更を検知し、登録されたコール関数に通知するためのもの
+				// // ボタンをクリックすると実行される
+				// // 変数valueに配列valueChangedCallbacksに入っている値を入れる
+				// // そうすることで、最新の値をvalueに入れることが出来る
+				// dispatchValueChangedEvent() {
+				// 	for (const callback of this.valueChangedCallbacks) {
+				// 		callback(this.value);
+				// 	}
+				// }
 
 
 
