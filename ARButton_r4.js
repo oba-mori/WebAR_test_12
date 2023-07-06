@@ -177,8 +177,8 @@ class ARButton {
       valueChangedCallback = callback;
     }
 
-    // 外部ファイルからコールバック関数を設定するためにエクスポート
-    return { setValueChangedCallback };
+    // // 外部ファイルからコールバック関数を設定するためにエクスポート
+    // return { setValueChangedCallback };
 
 
 
