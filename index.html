@@ -411,15 +411,16 @@
 
 
 const arButton = new ARButton();
-const button_1 = arButton.createButton();
-document.body.appendChild(button_1);
+// const button_1 = arButton.createButton();
+// document.body.appendChild(button_1);
 
-function displayXValue() {
+function displayXValue(event) {
+	const x = event.detail;
   console.log("xの値:", arButton.x);
 }
 
 // xの値が変化した時に表示する
-arButton.addEventListener('xChanged', displayXValue);
+window.addEventListener('xChanged', displayXValue);
 
 
 

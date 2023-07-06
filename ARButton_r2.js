@@ -143,7 +143,7 @@ class ARButton {
 					// xの値を切り替える処理
 					this.x = (this.x === 0) ? 1 : 0;
 					console.log("xの値が切り替わりました:", this.x);				
-
+					dispatchEvent(new CustomEvent('xChanged', { detail: this.x }));
 				});
 
 
