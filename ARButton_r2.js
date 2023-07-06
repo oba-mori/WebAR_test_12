@@ -117,12 +117,28 @@ class ARButton {
 
 
 				button_test1.addEventListener('click', () => {
+					// B.js
+					// Aファイルで定義した関数を使用して変数の変更を通知する
+					receiveVariableChange(20);
+
+
 					if (text === 'Hello') {
 						text = 'World';						
 						button_test1.textContent = 'ボタン (無効)'
+
+
+
+											// B.js
+						// Aファイルで定義した関数を使用して変数の変更を通知する
+						receiveVariableChange(20);
 					} else {
 						text = 'Hello';
 						button_test1.textContent = 'ボタン (有効)'
+
+
+											// B.js
+						// Aファイルで定義した関数を使用して変数の変更を通知する
+						receiveVariableChange(50);
 					}
 					console.log('text:', text);
 					alert("text: " + text);

@@ -411,9 +411,28 @@
 
 
 
+// A.js
 
+// 初期値を設定
+var myVariable = 10;
 
+// 変数の変更を検知する関数
+function handleVariableChange(newValue) {
+  console.log('変数が変更されました:', newValue);
+  // ここで変更を表示するなどの必要な処理を実行します
+}
 
+// Bファイルから変数の変更を受け取る関数
+function receiveVariableChange(newValue) {
+  myVariable = newValue;
+  handleVariableChange(newValue);
+}
+
+// 使用例
+handleVariableChange(myVariable); // 初期値を表示
+
+// Bファイルからの変更を受け取るための関数をグローバルスコープに公開
+window.receiveVariableChange = receiveVariableChange;
 
 
 
