@@ -5,7 +5,12 @@
 var loadModel2_display = true;	//モデル2の表示(初期値をtrueに設定)
 
 
-class ARButton {
+class ARButton {  
+	constructor() {
+		this.value = 0;
+		this.valueChangedCallbacks = [];
+	}
+
 
 	static createButton( renderer, sessionInit = {} ) {
 
@@ -116,37 +121,23 @@ class ARButton {
 				// });
 
 
-				this.x = 0; // クラスのプロパティとして変数を定義
+				
 				button_test1.addEventListener('click', () => {
 					if (text === 'Hello') {
 						text = 'World';						
 						button_test1.textContent = 'ボタン (無効)'
-
-						this.x = 10;
 					} else {
 						text = 'Hello';
 						button_test1.textContent = 'ボタン (有効)'
-
-						this.x = 2;
 					}
 					console.log('text:', text);
-					console.log('B_this.x:', this.x);
 					alert("text: " + text);
 				});
 				
 
 
-				
-				
-					
-				button_test1.addEventListener('click', () => {
-					// xの値を切り替える処理
-					this.x = (this.x === 0) ? 1 : 0;
-					console.log("xの値が切り替わりました:", this.x);				
-					dispatchEvent(new CustomEvent('xChanged', { detail: this.x }));
-				});
 
-
+				
 				
 
 				// // Aファイル
@@ -166,6 +157,63 @@ class ARButton {
 				// 	// barの値を別ファイルのコードに伝える
 				// 	updateBar(bar);
 				// });
+
+
+
+
+
+
+
+
+
+
+// テスト
+// 追加
+
+		// ボタンクリックイベント
+    button_test1.addEventListener('click', () => {
+			//変数値を変更する関数
+      this.incrementValue();
+
+			//表示
+      console.log('ボタンクリック後の値:', this.value);
+
+			// 値の変更を検知し、登録されたコール関数に通知するためのもの
+      this.dispatchValueChangedEvent();
+    });
+
+	//クリックした時にこの関数が処理される
+	//変数値を変更する関数
+  incrementValue() {
+		if (this.value == 0)
+		{
+  	  this.value = 1;
+		}
+		else
+		{
+			this.value = 0;
+		}
+	}
+
+	// 値が変更された時に実行したい関数を配列に登録する
+  addValueChangedCallback(callback) {
+    this.valueChangedCallbacks.push(callback);
+  }
+
+	// 値の変更を検知し、登録されたコール関数に通知するためのもの
+	// ボタンをクリックすると実行される
+	// 変数valueに配列valueChangedCallbacksに入っている値を入れる
+	// そうすることで、最新の値をvalueに入れることが出来る
+  dispatchValueChangedEvent() {
+    for (const callback of this.valueChangedCallbacks) {
+      callback(this.value);
+    }
+  }
+
+
+
+
+
 
 
 

@@ -407,20 +407,36 @@
 
 
 
-// main.js
+
+
+
+
+
+
+// テスト
+// 追加
 
 
 const arButton = new ARButton();
-// const button_1 = arButton.createButton();
-// document.body.appendChild(button_1);
 
-function displayXValue(event) {
-	const x = event.detail;
-  console.log("xの値:", arButton.x);
+// 値が変更された時に通知が来て実行される関数
+function handleValueChanged(value) {
+	console.log('値が変更されました:', value);
 }
 
-// xの値が変化した時に表示する
-window.addEventListener('xChanged', displayXValue);
+			// ARButton_r2の関数を実行(関数handleValueChangedを渡しながら)
+			// 値が変更された時に実行するための通知先の登録
+			// ()内には実行したい関数を入れる
+			arButton.addValueChangedCallback(handleValueChanged);
+
+
+
+
+
+
+
+
+
 
 
 
