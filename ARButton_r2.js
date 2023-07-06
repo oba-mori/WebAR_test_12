@@ -122,17 +122,17 @@ class ARButton {
 
 
 				
-				button_test1.addEventListener('click', () => {
-					if (text === 'Hello') {
-						text = 'World';						
-						button_test1.textContent = 'ボタン (無効)'
-					} else {
-						text = 'Hello';
-						button_test1.textContent = 'ボタン (有効)'
-					}
-					console.log('text:', text);
-					alert("text: " + text);
-				});
+				// button_test1.addEventListener('click', () => {
+				// 	if (text === 'Hello') {
+				// 		text = 'World';						
+				// 		button_test1.textContent = 'ボタン (無効)'
+				// 	} else {
+				// 		text = 'Hello';
+				// 		button_test1.textContent = 'ボタン (有効)'
+				// 	}
+				// 	console.log('text:', text);
+				// 	alert("text: " + text);
+				// });
 				
 
 
@@ -167,48 +167,50 @@ class ARButton {
 
 
 
-// テスト
-// 追加
+				// テスト
+				// 追加
 
-		// ボタンクリックイベント
-    button_test1.addEventListener('click', () => {
-			//変数値を変更する関数
-      this.incrementValue();
+				// ボタンクリックイベント
+				button_test1.addEventListener('click', () => {
+					//変数値を変更する関数
+					this.incrementValue();
 
-			//表示
-      console.log('ボタンクリック後の値:', this.value);
+					//表示
+					console.log('ボタンクリック後の値:', this.value);
 
-			// 値の変更を検知し、登録されたコール関数に通知するためのもの
-      this.dispatchValueChangedEvent();
-    });
+					// 値の変更を検知し、登録されたコール関数に通知するためのもの
+					this.dispatchValueChangedEvent();
+				});
 
-	//クリックした時にこの関数が処理される
-	//変数値を変更する関数
-  incrementValue() {
-		if (this.value == 0)
-		{
-  	  this.value = 1;
-		}
-		else
-		{
-			this.value = 0;
-		}
-	}
 
-	// 値が変更された時に実行したい関数を配列に登録する
-  addValueChangedCallback(callback) {
-    this.valueChangedCallbacks.push(callback);
-  }
+				//クリックした時にこの関数が処理される
+				//変数値を変更する関数
+				function incrementValue() {
+					if (this.value == 0)
+					{
+						this.value = 1;
+					}
+					else
+					{
+						this.value = 0;
+					}
+				}
 
-	// 値の変更を検知し、登録されたコール関数に通知するためのもの
-	// ボタンをクリックすると実行される
-	// 変数valueに配列valueChangedCallbacksに入っている値を入れる
-	// そうすることで、最新の値をvalueに入れることが出来る
-  dispatchValueChangedEvent() {
-    for (const callback of this.valueChangedCallbacks) {
-      callback(this.value);
-    }
-  }
+				// 値が変更された時に実行したい関数を配列に登録する
+				function addValueChangedCallback(callback) {
+					this.valueChangedCallbacks.push(callback);
+				}
+
+				// 値の変更を検知し、登録されたコール関数に通知するためのもの
+				// ボタンをクリックすると実行される
+				// 変数valueに配列valueChangedCallbacksに入っている値を入れる
+				// そうすることで、最新の値をvalueに入れることが出来る
+				function dispatchValueChangedEvent() {
+					for (const callback of this.valueChangedCallbacks) {
+						callback(this.value);
+					}
+				}
+
 
 
 
@@ -254,6 +256,11 @@ class ARButton {
 				sessionInit.domOverlay = { root: overlay };
 
 			}
+
+
+
+
+			
 
 			//
 
@@ -413,6 +420,29 @@ class ARButton {
 			return message;
 
 		}
+
+
+				// 値の変更を検知し、登録されたコール関数に通知するためのもの
+				// ボタンをクリックすると実行される
+				// 変数valueに配列valueChangedCallbacksに入っている値を入れる
+				// そうすることで、最新の値をvalueに入れることが出来る
+				function dispatchValueChangedEvent() {
+					for (const callback of this.valueChangedCallbacks) {
+						callback(this.value);
+					}
+				}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	}
 }
