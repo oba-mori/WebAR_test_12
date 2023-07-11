@@ -562,4 +562,4 @@ class ARButton {
 	// }
 }
 
-export { ARButton, setButtonClickHandler };
+export { ARButton };
