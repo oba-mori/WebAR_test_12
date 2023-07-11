@@ -6,6 +6,11 @@ class ARButton {
 		// ボタンをbody要素に追加
 		const button = document.createElement( 'button' );
 
+						// ここに新しいbutton要素を追加
+						const button_test1 = document.createElement('button');
+
+
+
 		function showStartAR( /*device*/ ) {
 
 			if ( sessionInit.domOverlay === undefined ) {
@@ -38,7 +43,7 @@ class ARButton {
 
 
 				// ここに新しいbutton要素を追加
-				const button_test1 = document.createElement('button');
+				// const button_test1 = document.createElement('button');
 				button_test1.classList.add('button_test1');
 				button_test1.textContent = 'ボタン (有効)'; // ボタンのテキストを設定
 
@@ -96,13 +101,6 @@ class ARButton {
 				// button_test1.addEventListener('click', handleButtonClick);
 
 
-					// ボタンのクリックイベントハンドラを設定する関数
-					function setButtonClickHandler(handler) {
-						clickHandler = handler;
-						button_test1.addEventListener('click', clickHandler);
-					}
-
-
 
 
 
@@ -134,6 +132,21 @@ class ARButton {
 				sessionInit.domOverlay = { root: overlay };
 
 			}
+
+
+					// ボタンのクリックイベントハンドラを設定する関数
+					function setButtonClickHandler(handler) {
+						clickHandler = handler;
+						button_test1.addEventListener('click', clickHandler);
+					}
+
+
+
+
+
+
+
+
 
 			//
 
