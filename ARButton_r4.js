@@ -234,7 +234,9 @@ class ARButton {
 
 			} ).catch( showARNotAllowed );
 
-			// // return button;
+			
+			return button;
+
 			//     // 他の値を追加する場合は、オブジェクトリテラルに追加
 			// 		return {
 			// 			setValueChangedCallback,
