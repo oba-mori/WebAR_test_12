@@ -59,8 +59,11 @@ class ARButton {
 				overlay.appendChild(button_test1);
 
 
-
-
+			//追加
+   // クリックイベントのリスナーを設定
+	 button_test1.addEventListener('click', () => {
+		console.log('button_test1 clicked!');
+	});
 
 				// // button_test1で制御
 				// var button_seigyo = 0;
@@ -228,13 +231,13 @@ class ARButton {
 
 			// ---------------------------------------------
 			//追加
-			 // clickHandler関数の定義
-			 function clickHandler() {
-				console.log('button_test1 clicked!');
-			}
+			//  // clickHandler関数の定義
+			//  function clickHandler() {
+			// 	console.log('button_test1 clicked!!!!');
+			// }
 			
-			// クリックイベントのリスナーを設定
-			button_test1.addEventListener('click', clickHandler);
+			// // クリックイベントのリスナーを設定
+			// button_test1.addEventListener('click', clickHandler);
 			
 			// setButtonClickHandlerメソッドの定義
 			function setButtonClickHandler(handler) {
