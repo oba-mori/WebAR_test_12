@@ -59,11 +59,11 @@ class ARButton {
 				overlay.appendChild(button_test1);
 
 
-	// 		//追加
-  //  // クリックイベントのリスナーを設定
-	//  button_test1.addEventListener('click', () => {
-	// 	console.log('button_test1がクリックされた!');
-	// });
+				// 		//追加
+				//  // クリックイベントのリスナーを設定
+				//  button_test1.addEventListener('click', () => {
+				// 	console.log('button_test1がクリックされた!');
+				// });
 
 
 
@@ -88,11 +88,11 @@ class ARButton {
 				
 
 
-				// ボタンのクリックイベントのコールバック関数
-				function handleButtonClick() {
-					console.log('ボタンがクリックされました');
-					// 他の処理を追加する場合はここに記述します
-				}
+				// // ボタンのクリックイベントのコールバック関数
+				// function handleButtonClick() {
+				// 	console.log('ボタンがクリックされました');
+				// 	// 他の処理を追加する場合はここに記述します
+				// }
 
 				// ボタンにクリックイベントのリスナーを追加
 				button_test1.addEventListener('click', handleButtonClick);
