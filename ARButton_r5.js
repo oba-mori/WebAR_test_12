@@ -55,9 +55,7 @@ class ARButton {
 				button_test1.style.bottom = '10px';
 
 
-				// ボタンをoverlayに追加
-				overlay.appendChild(button_test1);
-
+	
 
 				// 		//追加
 				//  // クリックイベントのリスナーを設定
@@ -98,11 +96,24 @@ class ARButton {
 				// button_test1.addEventListener('click', handleButtonClick);
 
 
-// ボタンのクリックイベントハンドラを設定する関数
-function setButtonClickHandler(handler) {
-  clickHandler = handler;
-  button_test1.addEventListener('click', clickHandler);
-}
+					// ボタンのクリックイベントハンドラを設定する関数
+					function setButtonClickHandler(handler) {
+						clickHandler = handler;
+						button_test1.addEventListener('click', clickHandler);
+					}
+
+
+
+
+
+			// ボタンをoverlayに追加
+				overlay.appendChild(button_test1);
+
+
+
+
+
+
 
 
 
@@ -275,6 +286,10 @@ function setButtonClickHandler(handler) {
 
 
 
+			
+
+
+
 
 
 
@@ -291,16 +306,17 @@ function setButtonClickHandler(handler) {
 
 			} ).catch( showARNotAllowed );
 
-			return button;
+			// return button;
 
-			// テスト
-			// return {
-			// 	// setButtonClickHandler,
+			テスト
+			return {
+				// setButtonClickHandler,
 
-			// 	// 他の返り値を追加
-			// 	button,
-			// 	button_test1,
-			// };
+				// 他の返り値を追加
+				button,
+				button_test1,
+				setButtonClickHandler
+			};
 
 		} else {
 
