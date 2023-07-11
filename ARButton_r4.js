@@ -79,13 +79,6 @@ class ARButton {
 
 
 
-
-
-
-
-
-
-
 				const path = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
 				path.setAttribute( 'd', 'M 12,12 L 28,28 M 28,12 12,28' );
 				path.setAttribute( 'stroke', '#fff' );
@@ -241,13 +234,13 @@ class ARButton {
 
 			} ).catch( showARNotAllowed );
 
-			// return button;
-			    // 他の値を追加する場合は、オブジェクトリテラルに追加
-					return {
-						setValueChangedCallback,
-						// 他の返り値を追加
-						button
-					};
+			// // return button;
+			//     // 他の値を追加する場合は、オブジェクトリテラルに追加
+			// 		return {
+			// 			setValueChangedCallback,
+			// 			// 他の返り値を追加
+			// 			button
+			// 		};
 
 		} else {
 
