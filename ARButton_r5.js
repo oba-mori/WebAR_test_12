@@ -314,7 +314,7 @@ class ARButton {
 
 				// 他の返り値を追加
 				button,
-				button_test1,
+				// button_test1,
 				setButtonClickHandler
 			};
 
