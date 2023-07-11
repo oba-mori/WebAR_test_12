@@ -308,7 +308,7 @@ class ARButton {
 
 			// return button;
 
-			テスト
+			// テスト
 			return {
 				// setButtonClickHandler,
 
