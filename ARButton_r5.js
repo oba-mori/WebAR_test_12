@@ -94,11 +94,15 @@ class ARButton {
 				// 	// 他の処理を追加する場合はここに記述します
 				// }
 
-				// ボタンにクリックイベントのリスナーを追加
-				button_test1.addEventListener('click', handleButtonClick);
+				// // ボタンにクリックイベントのリスナーを追加
+				// button_test1.addEventListener('click', handleButtonClick);
 
 
-
+// ボタンのクリックイベントハンドラを設定する関数
+function setButtonClickHandler(handler) {
+  clickHandler = handler;
+  button_test1.addEventListener('click', clickHandler);
+}
 
 
 
@@ -253,13 +257,13 @@ class ARButton {
 			// // クリックイベントのリスナーを設定
 			// button_test1.addEventListener('click', clickHandler);
 			
-			// setButtonClickHandlerメソッドの定義
-			function setButtonClickHandler(handler) {
-				clickHandler = handler;
-				// button_test1.removeEventListener('click', clickHandler); // 既存のリスナーを削除
-				// clickHandler = handler; // 新しいハンドラを設定
-				// button_test1.addEventListener('click', clickHandler); // 新しいリスナーを追加
-			}
+			// // setButtonClickHandlerメソッドの定義
+			// function setButtonClickHandler(handler) {
+			// 	clickHandler = handler;
+			// 	// button_test1.removeEventListener('click', clickHandler); // 既存のリスナーを削除
+			// 	// clickHandler = handler; // 新しいハンドラを設定
+			// 	// button_test1.addEventListener('click', clickHandler); // 新しいリスナーを追加
+			// }
 
 			// // setButtonClickHandlerメソッドを追加
 			// button_test1.setButtonClickHandler = setButtonClickHandler;
@@ -542,4 +546,4 @@ class ARButton {
 	// }
 }
 
-export { ARButton };
+export { ARButton, setButtonClickHandler };

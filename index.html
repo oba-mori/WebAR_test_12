@@ -320,14 +320,23 @@
 
 
 
-				// ボタンのクリックイベントを検知する処理
-				function handleButtonTest1Click() {
-					console.log('ARButton_r5.jsで作成されたボタンがクリックされました');
-					// 他の処理を追加する場合はここに記述します
-				}
+				// // ボタンのクリックイベントを検知する処理
+				// function handleButtonTest1Click() {
+				// 	console.log('ARButton_r5.jsで作成されたボタンがクリックされました');
+				// 	// 他の処理を追加する場合はここに記述します
+				// }
 
 				// // ARButtonのボタンに対してクリックイベントのリスナーを追加
 				// ARButton.button_test1.addEventListener('click', handleButtonTest1Click);
+
+
+				function handleButtonTest1Click() {
+  console.log('button_test1がクリックされた!');
+}
+
+setButtonClickHandler(handleButtonTest1Click);
+
+
 
 
 
