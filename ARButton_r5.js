@@ -78,7 +78,7 @@ class ARButton {
 					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
 
 					//表示
-					console.log('ボタンクリック後の値:', this.value);
+					console.log('ボタンクリック後の値:', arButton.value);
 
 					// 値の変更を検知し、登録されたコール関数に通知するためのもの
 					arButton.dispatchValueChangedEvent();
