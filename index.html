@@ -117,14 +117,13 @@
 			let hitTestSource = null;
 			let hitTestSourceRequested = false;
 
-			// ARButton クラスのインスタンスを作成
-			const arButton = new ARButton();
-
 
 			init();
 			animate();
 
 			function init() {
+				// ARButton クラスのインスタンスを作成
+				const arButton = new ARButton();
 
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );

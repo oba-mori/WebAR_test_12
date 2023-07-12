@@ -11,7 +11,6 @@ class ARButton {
 	static createButton( renderer, sessionInit = {} ) {
 
 
-
 		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
 
 
