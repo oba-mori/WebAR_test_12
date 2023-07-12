@@ -82,11 +82,11 @@ class ARButton {
 					//変数値を変更する関数
 					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
 
-					//表示
-					console.log('ボタンクリック後の値:', arButton.value);
+					// //表示
+					// console.log('ボタンクリック後の値:', arButton.value);
 
-					// 値の変更を検知し、登録されたコール関数に通知するためのもの
-					arButton.dispatchValueChangedEvent();
+					// // 値の変更を検知し、登録されたコール関数に通知するためのもの
+					// arButton.dispatchValueChangedEvent();
 				});
 
 
@@ -303,23 +303,27 @@ class ARButton {
 		}
 	}
 
-	// 値が変更された時に実行したい関数を配列に登録する
-  // 今回はHTMLから関数を登録する
-  addValueChangedCallback(callback) {
-		
-    this.valueChangedCallbacks.push(callback);
-  }
 
-	// 値の変更を検知し、登録されたコール関数に通知するためのもの
-	// ボタンをクリックすると実行される
-	// 変数valueに配列valueChangedCallbacksに入っている値を入れる
-	// そうすることで、最新の値をvalueに入れることが出来る
-  dispatchValueChangedEvent() {
-    for (const callback of this.valueChangedCallbacks) {
-      callback(this.value);
-    }
-		console.log("this.valueChangedCallbacks : ", this.valueChangedCallbacks);
-  }
+	// // 要約！コールバック関数を登録するためのもの
+	// // 	目的: 値が変更された時に実行したい関数を登録するためのメソッドです。
+	// // 使い方: addValueChangedCallback(callback) メソッドに実行したい関数 callback を引数として渡します。関数は valueChangedCallbacks 配列に追加されます。
+	// // 処理内容: callback 関数を valueChangedCallbacks 配列に追加することで、値の変更を検知した時に実行したい関数を複数登録することができます。
+  // addValueChangedCallback(callback) {
+		
+  //   this.valueChangedCallbacks.push(callback);
+  // }
+
+
+	// // 要約！登録されたコールバック関数を呼び出すためのもの
+	// // 目的: 登録されたコールバック関数を呼び出し、値の変更を通知するためのメソッドです。
+	// // 使い方: dispatchValueChangedEvent() メソッドを呼び出すことで、valueChangedCallbacks 配列に登録されているコールバック関数が順に実行されます。
+	// // 処理内容: valueChangedCallbacks 配列内の各コールバック関数に対してループを実行し、それぞれの関数を引数 this.value（値の変更を検知した際の最新の値）と共に呼び出します。これにより、値が変更されたことを通知するための処理を実行します。
+  // dispatchValueChangedEvent() {
+  //   for (const callback of this.valueChangedCallbacks) {
+  //     callback(this.value);
+  //   }
+	// 	console.log("this.valueChangedCallbacks : ", this.valueChangedCallbacks);
+  // }
 
 
 
