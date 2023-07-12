@@ -1,4 +1,4 @@
-// r1
+// r5
 class ARButton {
 
 	// 追加
@@ -40,7 +40,7 @@ class ARButton {
 
 					currentSession.end();
 
-				} );
+				});
 				overlay.appendChild( svg );
 
 
