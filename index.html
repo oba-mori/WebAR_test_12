@@ -307,23 +307,6 @@
 
 
 
-				// 追加
-				const arButton = new ARButton();
-
-				let previousValue = arButton.value; // 変更前の値を保持する変数
-
-				arButton.addValueChangedCallback((newValue) => {
-					if (previousValue === 0 && newValue === 1) {
-						console.log('value changed: 0 -> 1');
-					} else if (previousValue === 1 && newValue === 0) {
-						console.log('value changed: 1 -> 0');
-					}
-					previousValue = newValue; // 値を更新する
-				});
-
-
-
-
 
 
 				scene.add( controller );
