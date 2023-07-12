@@ -12,13 +12,10 @@ class ARButton {
 
 
 
-		// const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+
+
 		
-		// 修正後のコード
-		const arButton = new ARButton.ARButton(); // ARButton クラスのインスタンスを作成
-
-
-
 
 		// ボタンをbody要素に追加
 		const button = document.createElement( 'button' );
