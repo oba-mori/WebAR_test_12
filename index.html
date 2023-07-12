@@ -117,6 +117,10 @@
 			let hitTestSource = null;
 			let hitTestSourceRequested = false;
 
+			// ARButton クラスのインスタンスを作成
+			const arButton = new ARButton();
+
+
 			init();
 			animate();
 
@@ -286,8 +290,6 @@
 				let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
 				toggleButton.addEventListener('click', () => {
-					// ARButton クラスのインスタンスを作成
-					const arButton = new ARButton();
 
 					// value の値を表示
 					console.log('value:', arButton.value);

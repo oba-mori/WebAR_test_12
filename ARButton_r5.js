@@ -22,6 +22,7 @@ class ARButton {
 
 		function showStartAR( /*device*/ ) {
 
+			
 			if ( sessionInit.domOverlay === undefined ) {
 
 				const overlay = document.createElement( 'div' );
@@ -92,6 +93,7 @@ class ARButton {
 
 
 
+				
 
 
 
