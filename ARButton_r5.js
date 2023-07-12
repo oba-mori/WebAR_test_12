@@ -10,6 +10,8 @@ class ARButton {
 
 	static createButton( renderer, sessionInit = {} ) {
 
+		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+
 		// ボタンをbody要素に追加
 		const button = document.createElement( 'button' );
 
@@ -73,13 +75,13 @@ class ARButton {
 				// ボタンクリックイベント
 				button_test1.addEventListener('click', () => {
 					//変数値を変更する関数
-					this.incrementValue();
+					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
 
 					//表示
 					console.log('ボタンクリック後の値:', this.value);
 
 					// 値の変更を検知し、登録されたコール関数に通知するためのもの
-					this.dispatchValueChangedEvent();
+					arButton.dispatchValueChangedEvent();
 				});
 
 
@@ -172,6 +174,14 @@ class ARButton {
 				}
 
 			};
+
+
+
+
+
+
+
+			
 
 		}
 
@@ -268,6 +278,8 @@ class ARButton {
 	}
 
 
+	
+	
 
 
 
