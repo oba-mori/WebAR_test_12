@@ -10,7 +10,15 @@ class ARButton {
 
 	static createButton( renderer, sessionInit = {} ) {
 
-		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+
+
+		// const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+		
+		// 修正後のコード
+		const arButton = new ARButton.ARButton(); // ARButton クラスのインスタンスを作成
+
+
+
 
 		// ボタンをbody要素に追加
 		const button = document.createElement( 'button' );
@@ -301,6 +309,7 @@ class ARButton {
 	// 値が変更された時に実行したい関数を配列に登録する
   // 今回はHTMLから関数を登録する
   addValueChangedCallback(callback) {
+		
     this.valueChangedCallbacks.push(callback);
   }
 
