@@ -87,6 +87,7 @@ class ARButton {
 
 					// // 値の変更を検知し、登録されたコール関数に通知するためのもの
 					// arButton.dispatchValueChangedEvent();
+					
 				});
 
 

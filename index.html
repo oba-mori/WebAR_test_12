@@ -286,6 +286,12 @@
 				let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
 				toggleButton.addEventListener('click', () => {
+					// ARButton クラスのインスタンスを作成
+					const arButton = new ARButton();
+
+					// value の値を表示
+					console.log('value:', arButton.value);
+					
 					if (isEventListenerActive) {
 						controller.removeEventListener('select', loadModel2);
 						isEventListenerActive = false;
@@ -303,12 +309,17 @@
 
 				// 追加
 				const arButton = new ARButton();
-				// value の値を表示
-				console.log('value:', arButton.value);
 
+				let previousValue = arButton.value; // 変更前の値を保持する変数
 
-
-
+				arButton.addValueChangedCallback((newValue) => {
+					if (previousValue === 0 && newValue === 1) {
+						console.log('value changed: 0 -> 1');
+					} else if (previousValue === 1 && newValue === 0) {
+						console.log('value changed: 1 -> 0');
+					}
+					previousValue = newValue; // 値を更新する
+				});
 
 
 
