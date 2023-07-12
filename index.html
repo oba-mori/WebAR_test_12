@@ -134,7 +134,6 @@
 				scene.add( light );
 
 				//
-
 				renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
@@ -160,6 +159,7 @@
 				container.appendChild(button);
 
 
+			
 
 
 
@@ -300,41 +300,19 @@
 
 
 
-				// // 追加テスト
-				// const { setValueChangedCallback } = ARButton.createButton();
 
-				// // コールバック関数を設定
-				// setValueChangedCallback((value) => {
-				// 	console.log('button_seigyo:', value);
-				// });
+			// 追加
+			const arButton = new ARButton();
 
+			// 値が変更された時に通知が来て実行される関数
+			function handleValueChanged(value) {
+				console.log('値が変更されました:', value);
+			}
 
-				// ---------------------------------------------
-				// //追加
-				// const arButton = new ARButton();
-				// // ボタンのクリックイベントを検知する
-				// arButton.button_test1.addEventListener('click', () => {
-				// 	console.log('button_test1 clicked!');
-				// });
-
-
-
-
-				// // ボタンのクリックイベントを検知する処理
-				// function handleButtonTest1Click() {
-				// 	console.log('ARButton_r5.jsで作成されたボタンがクリックされました');
-				// 	// 他の処理を追加する場合はここに記述します
-				// }
-
-				// // ARButtonのボタンに対してクリックイベントのリスナーを追加
-				// ARButton.button_test1.addEventListener('click', handleButtonTest1Click);
-
-
-				function handleButtonTest1Click() {
-  console.log('button_test1がクリックされた!');
-}
-
-setButtonClickHandler(handleButtonTest1Click);
+			// ARButton_r2の関数を実行(関数handleValueChangedを渡しながら)
+			// 値が変更された時に実行するための通知先の登録
+			// ()内には実行したい関数を入れる
+			arButton.addValueChangedCallback(handleValueChanged);
 
 
 
