@@ -132,6 +132,11 @@
 				// ARButton クラスのインスタンスを作成
 				// const arButton = new ARButton();
 				arButton = new ARButton();
+					// value の値を表示
+					console.log('a:', arButton.a);
+
+
+
 
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
@@ -300,6 +305,7 @@
 
 					// value の値を表示
 					console.log('value:', arButton.value);
+
 					
 					if (isEventListenerActive) {
 						controller.removeEventListener('select', loadModel2);

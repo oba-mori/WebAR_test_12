@@ -5,6 +5,8 @@ class ARButton {
 	constructor() {
     this.value = 0;
     this.valueChangedCallbacks = [];
+
+		this.a = 10;
   }
 
 
