@@ -309,9 +309,11 @@ class ARButton {
 	// 変数valueに配列valueChangedCallbacksに入っている値を入れる
 	// そうすることで、最新の値をvalueに入れることが出来る
   dispatchValueChangedEvent() {
+		console.log("");
     for (const callback of this.valueChangedCallbacks) {
       callback(this.value);
     }
+		console.log("this.valueChangedCallbacks : ", this.valueChangedCallbacks);
   }
 
 
