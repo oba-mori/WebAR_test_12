@@ -295,7 +295,7 @@ class ARButton {
 	//クリックした時にこの関数が処理される
 	//変数値を変更する関数
   incrementValue() {
-		this.a = a + 1;
+		this.a = this.a + 1;
 		console.log("AR this.a : ", this.a);
 
 		if (this.value == 0)
