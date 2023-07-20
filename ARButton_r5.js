@@ -10,6 +10,34 @@ class ARButton {
   }
 
 
+
+  createButton_tuika() {
+    const button_bb = document.createElement('button');
+    button_bb.textContent = 'ボタン';
+
+
+		// ボタンクリックイベント
+    button.addEventListener('click', () => {
+			//変数値を変更する関数
+      this.a = this.a + 5;
+
+			//表示
+      console.log('ボタンクリック後の値:', this.a);
+
+
+    });
+
+		// // ボタン要素を返す
+    // return button_bb;
+  }
+
+
+
+
+
+
+
+
 	static createButton( renderer, sessionInit = {} ) {
 
 
@@ -308,6 +336,7 @@ class ARButton {
 			this.value = 0;
 			console.log("else this.value : ", this.value);
 		}
+		
 	}
 
 
