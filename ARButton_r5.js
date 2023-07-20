@@ -7,30 +7,27 @@ class ARButton {
     this.valueChangedCallbacks = [];
 
 		this.a = 10;
+		this.k = 0;
   }
 
+  // ボタン作成
+  button_sakusei(){
+    // ボタン要素を作成
+    const button = document.createElement('button');
+    button.textContent = '新ボタン';
 
-
-  createButton_tuika() {
-    const button_bb = document.createElement('button');
-    button_bb.textContent = 'ボタン';
-
-
-		// ボタンクリックイベント
+    // ボタンクリックイベントを設定
     button.addEventListener('click', () => {
-			//変数値を変更する関数
-      this.a = this.a + 5;
-
-			//表示
-      console.log('ボタンクリック後の値:', this.a);
-
-
+      console.log('新ボタンがクリックされました');
+      // ここにボタンがクリックされたときの処理を記述します
+      this.k = this.k + 1;
+      			//表示
+      console.log('ボタンクリック後の値 k:', this.k);
     });
 
-		// // ボタン要素を返す
-    // return button_bb;
+    // body要素にボタン要素を追加
+    document.body.appendChild(button);
   }
-
 
 
 
@@ -42,8 +39,6 @@ class ARButton {
 
 
 		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
-
-
 		
 
 		// ボタンをbody要素に追加

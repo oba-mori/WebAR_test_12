@@ -123,15 +123,19 @@
 			// const arButton = new ARButton();
 			let arButton;
 
+			arButton = new ARButton();
+
+
 
 			// 関数読み込み
 			init();
 			animate();
 
+
 			function init() {
 				// ARButton クラスのインスタンスを作成
 				// const arButton = new ARButton();
-				arButton = new ARButton();
+				// arButton = new ARButton();
 				// value の値を表示
 				console.log('a:', arButton.a);
 
@@ -306,7 +310,17 @@
 					// value の値を表示
 					console.log('value:', arButton.value);
 					console.log('クリック a:', arButton.a);
-					
+
+
+
+
+
+					// メソッドを呼び出す
+					arButton.button_sakusei();
+					console.log('クリック k:', arButton.k);
+
+
+
 
 					
 					if (isEventListenerActive) {
