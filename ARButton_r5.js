@@ -10,6 +10,8 @@ class ARButton {
 		this.k = 0;
   }
 
+
+
   // ボタン作成
   button_sakusei(){
     // ボタン要素を作成
@@ -96,24 +98,26 @@ class ARButton {
 
 
 
-				// ボタンをoverlayに追加
-				overlay.appendChild(button_test1);
-
-
-
-
 				// ボタンクリックイベント
 				button_test1.addEventListener('click', () => {
 					//変数値を変更する関数
-					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
+					this.a = this.a + 1;
+					console.log("AR this.a : ", this.a);
 
-					// //表示
-					// console.log('ボタンクリック後の値:', arButton.value);
-
-					// // 値の変更を検知し、登録されたコール関数に通知するためのもの
-					// arButton.dispatchValueChangedEvent();
-					
+					if (this.value == 0)
+					{
+						this.value = 1;
+						console.log("true this.value : ", this.value);
+					}
+					else
+					{
+						this.value = 0;
+						console.log("else this.value : ", this.value);
+					}					
 				});
+
+				// ボタンをoverlayに追加
+				overlay.appendChild(button_test1);
 
 
 
@@ -314,25 +318,6 @@ class ARButton {
 	
 
 
-
-	//クリックした時にこの関数が処理される
-	//変数値を変更する関数
-  incrementValue() {
-		this.a = this.a + 1;
-		console.log("AR this.a : ", this.a);
-
-		if (this.value == 0)
-		{
-  	  this.value = 1;
-			console.log("true this.value : ", this.value);
-		}
-		else
-		{
-			this.value = 0;
-			console.log("else this.value : ", this.value);
-		}
-		
-	}
 
 
 	// // 要約！コールバック関数を登録するためのもの
