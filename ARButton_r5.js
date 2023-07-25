@@ -14,20 +14,6 @@ class ARButton {
   button_sakusei(){
 
 		console.log('ボタン作成、変数変更呼び出し');
-
-  }
-
-
-
-
-
-
-
-	static createButton( renderer, sessionInit = {} ) {
-
-
-
-
 		
     // ボタン要素を作成
     const button_shin = document.createElement('button_shin');
@@ -44,6 +30,20 @@ class ARButton {
 
     // body要素にボタン要素を追加
     document.body.appendChild(button_shin);
+
+  }
+
+
+
+
+
+
+
+	static createButton( renderer, sessionInit = {} ) {
+
+
+
+
 
 
 
