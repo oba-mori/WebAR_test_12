@@ -25,10 +25,27 @@ class ARButton {
 
 	static createButton( renderer, sessionInit = {} ) {
 
-
+		// ここで変数変更は反映される
 
 
 		
+
+
+
+		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+		
+
+		// ボタンをbody要素に追加
+		const button = document.createElement( 'button' );
+
+		function showStartAR( /*device*/ ) {
+
+			
+			if ( sessionInit.domOverlay === undefined ) {
+
+
+
+
     // ボタン要素を作成
     const button_shin = document.createElement('button_shin');
     button_shin.textContent = '新ボタン';
@@ -50,16 +67,10 @@ class ARButton {
 		
 
 
-		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
-		
 
-		// ボタンをbody要素に追加
-		const button = document.createElement( 'button' );
 
-		function showStartAR( /*device*/ ) {
 
-			
-			if ( sessionInit.domOverlay === undefined ) {
+
 
 				const overlay = document.createElement( 'div' );
 				overlay.classList.add('overlay_1');
