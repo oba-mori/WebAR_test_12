@@ -10,25 +10,11 @@ class ARButton {
 		this.k = 0;
   }
 
-
-
   // ボタン作成
   button_sakusei(){
-    // ボタン要素を作成
-    const button = document.createElement('button');
-    button.textContent = '新ボタン';
 
-    // ボタンクリックイベントを設定
-    button.addEventListener('click', () => {
-      console.log('新ボタンがクリックされました');
-      // ここにボタンがクリックされたときの処理を記述します
-      this.k = this.k + 1;
-      			//表示
-      console.log('ボタンクリック後の値 k:', this.k);
-    });
+		console.log('ボタン作成、変数変更呼び出し');
 
-    // body要素にボタン要素を追加
-    document.body.appendChild(button);
   }
 
 
@@ -38,6 +24,30 @@ class ARButton {
 
 
 	static createButton( renderer, sessionInit = {} ) {
+
+
+
+
+		
+    // ボタン要素を作成
+    const button_shin = document.createElement('button_shin');
+    button_shin.textContent = '新ボタン';
+
+    // ボタンクリックイベントを設定
+    button_shin.addEventListener('click', () => {
+      console.log('新ボタンがクリックされました');
+      // ここにボタンがクリックされたときの処理を記述します
+      this.k = this.k + 1;
+      			//表示
+      console.log('ボタンクリック後の値 k:', this.k);
+    });
+
+    // body要素にボタン要素を追加
+    document.body.appendChild(button_shin);
+
+
+
+		
 
 
 		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
@@ -98,26 +108,24 @@ class ARButton {
 
 
 
+				// ボタンをoverlayに追加
+				overlay.appendChild(button_test1);
+
+
+
+
 				// ボタンクリックイベント
 				button_test1.addEventListener('click', () => {
 					//変数値を変更する関数
-					this.a = this.a + 1;
-					console.log("AR this.a : ", this.a);
+					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
 
-					if (this.value == 0)
-					{
-						this.value = 1;
-						console.log("true this.value : ", this.value);
-					}
-					else
-					{
-						this.value = 0;
-						console.log("else this.value : ", this.value);
-					}					
+					// //表示
+					// console.log('ボタンクリック後の値:', arButton.value);
+
+					// // 値の変更を検知し、登録されたコール関数に通知するためのもの
+					// arButton.dispatchValueChangedEvent();
+					
 				});
-
-				// ボタンをoverlayに追加
-				overlay.appendChild(button_test1);
 
 
 
@@ -318,6 +326,25 @@ class ARButton {
 	
 
 
+
+	//クリックした時にこの関数が処理される
+	//変数値を変更する関数
+  incrementValue() {
+		this.a = this.a + 1;
+		console.log("AR this.a : ", this.a);
+
+		if (this.value == 0)
+		{
+  	  this.value = 1;
+			console.log("true this.value : ", this.value);
+		}
+		else
+		{
+			this.value = 0;
+			console.log("else this.value : ", this.value);
+		}
+		
+	}
 
 
 	// // 要約！コールバック関数を登録するためのもの
