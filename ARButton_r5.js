@@ -40,10 +40,11 @@ class ARButton {
 
 
 
-	static createButton( renderer, sessionInit = {} ) {
+	static createButton( renderer, sessionInit = {} , objectToUpdate) {
 
-		this.a = 20;
-		console.log('createButton 呼び出し a:', this.a);
+		// 変数
+		objectToUpdate.value = 42;
+		console.log('createButton 呼び出し a:', objectToUpdate.value);
 
 
 		
