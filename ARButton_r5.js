@@ -388,6 +388,9 @@ class ARButton {
 }
 
 
+		// グローバル変数を定義
+		let globalVariable = 0;
+
 		// グローバル変数を持つオブジェクトを作成
 		const variableObject = { value: globalVariable };
 
