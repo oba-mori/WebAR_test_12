@@ -41,8 +41,8 @@ class ARButton {
 
 
 	static createButton( renderer, sessionInit = {} , objectToUpdate) {
-
-		// 変数
+		// ... この中でボタンの作成とクリックイベントの処理が行われる ...
+		// グローバル変数を変更
 		objectToUpdate.value = 42;
 		console.log('createButton 呼び出し a:', objectToUpdate.value);
 
@@ -333,6 +333,10 @@ class ARButton {
 	}
 
 
+
+
+
+
 	
 	
 
@@ -382,5 +386,13 @@ class ARButton {
 
 
 }
+
+
+		// グローバル変数を持つオブジェクトを作成
+		const variableObject = { value: globalVariable };
+
+		// グローバル変数を持つオブジェクトを引数として渡す
+		ARButton.createButton(null, null, variableObject);
+
 
 export { ARButton };
