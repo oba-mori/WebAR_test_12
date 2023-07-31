@@ -43,7 +43,7 @@ class ARButton {
 	static createButton( renderer, sessionInit = {} ) {
 
 		this.a = 20;
-
+		console.log('createButton 呼び出し a:', this.a);
 
 
 		
