@@ -17,7 +17,7 @@ class ARButton {
 
 		
     // ボタン要素を作成
-    const button_shin = document.createElement('button_shin');
+    const button_shin = document.createElement('button');
     button_shin.textContent = '新ボタン';
 
     // ボタンクリックイベントを設定
