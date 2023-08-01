@@ -298,52 +298,61 @@
 				// // コード内で作成した3Dモデルを表示
 				// controller.addEventListener( 'select', onSelect );
 				// コード内で作成した3Dモデルを表示
+
+
+
+				
 				// モデル1
 				controller.addEventListener( 'select', loadModel1);
-				// モデル2
-				controller.addEventListener( 'select', loadModel2);
+				// // モデル2
+				// controller.addEventListener( 'select', loadModel2);
 				
+
+				
+				// // 有効無効ボタンによる3Dモデル表示非表示制御
+				// if (ARButton.q == 0) {
+				// 	controller.removeEventListener('select', loadModel2);
+
+				// 	// 確認用
+				// 	toggleButton.textContent = 'ボタン (無効)';
+				// } else {
+				// 	controller.addEventListener('select', loadModel2);
+
+				// 	// 確認用
+				// 	toggleButton.textContent = 'ボタン (有効)';
+				// }
+
+
+
+
+
 
 
 				// ボタンによる制御
 				// 3Dモデル表示関数無効(loadModel2 : medium)
-				const toggleButton = document.getElementById('toggleButton');
-				// let isEventListenerActive = true;	 	// 初期値をtrueに設定
+				let isEventListenerActive = true;	 	// モデル表示の初期値をtrue(表示)に設定
+
+
+				const toggleButton = document.getElementById('toggleButton');				
 
 				toggleButton.addEventListener('click', () => {
 					console.log('クリック q:', ARButton.q);
 					
-					// if (isEventListenerActive) {
-					// 	controller.removeEventListener('select', loadModel2);
-					// 	isEventListenerActive = false;
-					// 	toggleButton.textContent = 'ボタン (無効)';
-					// } else {
-					// 	controller.addEventListener('select', loadModel2);
-					// 	isEventListenerActive = true;
-					// 	toggleButton.textContent = 'ボタン (有効)';
-					// }
-				});
-				
-
-
-				// 初期 表示
-				let isEventListenerActive = true;	 	// 初期値をtrueに設定
-
-				// 有効無効ボタンによる3Dモデル表示非表示制御
-				if (ARButton.q == 0) {
+					if (isEventListenerActive) {
 						controller.removeEventListener('select', loadModel2);
 						isEventListenerActive = false;
-
-						// 確認用
 						toggleButton.textContent = 'ボタン (無効)';
 					} else {
 						controller.addEventListener('select', loadModel2);
 						isEventListenerActive = true;
-
-						// 確認用
 						toggleButton.textContent = 'ボタン (有効)';
 					}
+				});
+				
 
+
+
+		
 
 
 
