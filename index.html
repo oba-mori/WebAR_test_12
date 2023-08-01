@@ -138,7 +138,14 @@
 
 
 			function init() {
+				// ARButton クラスのインスタンスを作成
+				// const arButton = new ARButton();
+				// arButton = new ARButton();
+				// value の値を表示
+				console.log('a:', arButton.a);
 
+				// ボタン作成、変数変更呼び出し
+				arButton.button_sakusei();
 
 
 
@@ -303,41 +310,36 @@
 				// ボタンによる制御
 				// 3Dモデル表示関数無効(loadModel2 : medium)
 				const toggleButton = document.getElementById('toggleButton');
-				// let isEventListenerActive = true;	 	// 初期値をtrueに設定
-
-				toggleButton.addEventListener('click', () => {
-					console.log('クリック q:', ARButton.q);
-					
-					// if (isEventListenerActive) {
-					// 	controller.removeEventListener('select', loadModel2);
-					// 	isEventListenerActive = false;
-					// 	toggleButton.textContent = 'ボタン (無効)';
-					// } else {
-					// 	controller.addEventListener('select', loadModel2);
-					// 	isEventListenerActive = true;
-					// 	toggleButton.textContent = 'ボタン (有効)';
-					// }
-				});
-				
-
-
-				// 初期 表示
 				let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
-				// // 有効無効ボタンによる3Dモデル表示非表示制御
-				// if (ARButton.q == 0) {
-				// 		controller.removeEventListener('select', loadModel2);
-				// 		isEventListenerActive = false;
+				toggleButton.addEventListener('click', () => {
 
-				// 		// 確認用
-				// 		toggleButton.textContent = 'ボタン (無効)';
-				// 	} else {
-				// 		controller.addEventListener('select', loadModel2);
-				// 		isEventListenerActive = true;
+					// value の値を表示
+					console.log('value:', arButton.value);
+					console.log('クリック a:', arButton.a);
 
-				// 		// 確認用
-				// 		toggleButton.textContent = 'ボタン (有効)';
-				// 	}
+
+
+
+
+					// メソッドを呼び出す
+
+					console.log('クリック k:', arButton.k);
+
+
+
+
+					
+					if (isEventListenerActive) {
+						controller.removeEventListener('select', loadModel2);
+						isEventListenerActive = false;
+						toggleButton.textContent = 'ボタン (無効)';
+					} else {
+						controller.addEventListener('select', loadModel2);
+						isEventListenerActive = true;
+						toggleButton.textContent = 'ボタン (有効)';
+					}
+				});
 
 
 
