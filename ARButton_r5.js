@@ -1,5 +1,11 @@
 // r5
 class ARButton {
+	// 追加
+  // 静的なデータを管理するための静的プロパティ
+  static globalData = {
+    q: 10,
+  };
+
 
 	// 追加
 	constructor() {
@@ -41,16 +47,25 @@ class ARButton {
 
 
 	static createButton( renderer, sessionInit = {} , objectToUpdate) {
-		// ... この中でボタンの作成とクリックイベントの処理が行われる ...
-		// グローバル変数を変更
-		objectToUpdate.a = 42;
-		console.log('createButton 呼び出し a:', objectToUpdate.a);
+	// ... この中でボタンの作成とクリックイベントの処理が行われる ...
+  // グローバル変数を変更
+		// objectToUpdate.value = 42;
+		// console.log('createButton 呼び出し a:', objectToUpdate.value);
+
+
+    // 静的プロパティを変更
+    ARButton.globalData.q = 42;
+    console.log('createButton 呼び出し q:', ARButton.globalData.q);
+
+
+
+
 
 
 		
 
 
-		// const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
 		
 
 		// ボタンをbody要素に追加
@@ -128,7 +143,7 @@ class ARButton {
 				// ボタンクリックイベント
 				button_test1.addEventListener('click', () => {
 					//変数値を変更する関数
-					// arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
+					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
 
 					// //表示
 					// console.log('ボタンクリック後の値:', arButton.value);
@@ -340,7 +355,6 @@ class ARButton {
 	
 	
 
-	
 
 
 	//クリックした時にこの関数が処理される
@@ -389,11 +403,16 @@ class ARButton {
 }
 
 
-		// グローバル変数を持つオブジェクトを作成
-		const variableObject = { a: 10 };
 
-		// グローバル変数を持つオブジェクトを引数として渡す
-		ARButton.createButton(null, null, variableObject);
+console.log('クラス外 q:', ARButton.globalData.q);
+
+
+
+// // グローバル変数を持つオブジェクトを作成
+// const variableObject = { value: globalVariable };
+
+// // グローバル変数を持つオブジェクトを引数として渡す
+// ARButton.createButton(null, null, variableObject);
 
 
 export { ARButton };
