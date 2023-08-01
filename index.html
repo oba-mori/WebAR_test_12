@@ -332,12 +332,18 @@
 				let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
 				// 有効無効ボタンによる3Dモデル表示非表示制御
-				if (ARButton.q) {
+				if (ARButton.q == 0) {
 						controller.removeEventListener('select', loadModel2);
 						isEventListenerActive = false;
+
+						// 確認用
+							toggleButton.textContent = 'ボタン (無効)';
 					} else {
 						controller.addEventListener('select', loadModel2);
 						isEventListenerActive = true;
+
+						// 確認用
+						toggleButton.textContent = 'ボタン (無効)';
 					}
 
 
