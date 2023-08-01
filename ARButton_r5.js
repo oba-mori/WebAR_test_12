@@ -1,11 +1,7 @@
 // r5
 class ARButton {
 	// 追加
-  // 静的なデータを管理するための静的プロパティ
-  static globalData = {
-    q: 10,
-  };
-
+	static q = 0;
 
 	// 追加
 	constructor() {
@@ -46,20 +42,11 @@ class ARButton {
 
 
 
-	static createButton( renderer, sessionInit = {} , objectToUpdate) {
-	// ... この中でボタンの作成とクリックイベントの処理が行われる ...
-  // グローバル変数を変更
-		// objectToUpdate.value = 42;
-		// console.log('createButton 呼び出し a:', objectToUpdate.value);
+	static createButton( renderer, sessionInit = {}) {
 
 
-    // 静的プロパティを変更
-    ARButton.globalData.q = 42;
-    console.log('createButton 呼び出し q:', ARButton.globalData.q);
-
-
-
-
+		ARButton.q = 10;
+		console.log('static関数内 q:', ARButton.q);
 
 
 		
@@ -403,16 +390,6 @@ class ARButton {
 }
 
 
-
-console.log('クラス外 q:', ARButton.globalData.q);
-
-
-
-// // グローバル変数を持つオブジェクトを作成
-// const variableObject = { value: globalVariable };
-
-// // グローバル変数を持つオブジェクトを引数として渡す
-// ARButton.createButton(null, null, variableObject);
 
 
 export { ARButton };
