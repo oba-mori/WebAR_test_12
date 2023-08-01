@@ -73,12 +73,14 @@ class ARButton {
 					if (ARButton.q == 0)
 					{
 						ARButton.q = 1;
+						button_test1.textContent = 'ボタン (有効)'; // ボタンのテキストを設定
 						console.log("true ARButton.q : ", ARButton.q);
 					}
 					else
 					{
 						ARButton.q = 0;
 						console.log("else ARButton.q : ", ARButton.q);
+						button_test1.textContent = 'ボタン (無効)'; // ボタンのテキストを設定
 					}
 				});
 
