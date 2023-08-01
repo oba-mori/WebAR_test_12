@@ -3,56 +3,11 @@ class ARButton {
 	// 追加
 	static q = 0;
 
-	// 追加
-	constructor() {
-    this.value = 0;
-    this.valueChangedCallbacks = [];
-
-		this.a = 10;
-		this.k = 0;
-  }
-
-  // ボタン作成
-  button_sakusei(){
-
-		console.log('ボタン作成、変数変更呼び出し');
-
-		
-    // ボタン要素を作成
-    const button_shin = document.createElement('button');
-    button_shin.textContent = '新ボタン';
-
-    // ボタンクリックイベントを設定
-    button_shin.addEventListener('click', () => {
-      console.log('新ボタンがクリックされました');
-      // ここにボタンがクリックされたときの処理を記述します
-      this.k = this.k + 1;
-      			//表示
-      console.log('ボタンクリック後の値 k:', this.k);
-    });
-
-    // body要素にボタン要素を追加
-    document.body.appendChild(button_shin);
-
-  }
-
-
-
-
-
 
 
 	static createButton( renderer, sessionInit = {}) {
 
-
-		ARButton.q = 10;
-		console.log('static関数内 q:', ARButton.q);
-
-
-		
-
-
-		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+		// const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
 		
 
 		// ボタンをbody要素に追加
@@ -62,16 +17,6 @@ class ARButton {
 
 			
 			if ( sessionInit.domOverlay === undefined ) {
-
-
-
-
-
-
-
-
-
-
 				
 
 				const overlay = document.createElement( 'div' );
@@ -92,11 +37,6 @@ class ARButton {
 
 				});
 				overlay.appendChild( svg );
-
-
-
-
-
 
 
 
@@ -129,15 +69,17 @@ class ARButton {
 
 				// ボタンクリックイベント
 				button_test1.addEventListener('click', () => {
-					//変数値を変更する関数
-					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
-
-					// //表示
-					// console.log('ボタンクリック後の値:', arButton.value);
-
-					// // 値の変更を検知し、登録されたコール関数に通知するためのもの
-					// arButton.dispatchValueChangedEvent();
-					
+					//変数値を変更する
+					if (ARButton.q == 0)
+					{
+						ARButton.q = 1;
+						console.log("true ARButton.q : ", ARButton.q);
+					}
+					else
+					{
+						ARButton.q = 0;
+						console.log("else ARButton.q : ", ARButton.q);
+					}
 				});
 
 
@@ -334,60 +276,6 @@ class ARButton {
 		}
 	}
 
-
-
-
-
-
-	
-	
-
-
-
-	//クリックした時にこの関数が処理される
-	//変数値を変更する関数
-  incrementValue() {
-		this.a = this.a + 1;
-		console.log("AR this.a : ", this.a);
-
-		ARButton.q = ARButton.q + 1;
-		console.log("AR q : ", ARButton.q);
-		
-
-		if (this.value == 0)
-		{
-  	  this.value = 1;
-			console.log("true this.value : ", this.value);
-		}
-		else
-		{
-			this.value = 0;
-			console.log("else this.value : ", this.value);
-		}
-		
-	}
-
-
-	// // 要約！コールバック関数を登録するためのもの
-	// // 	目的: 値が変更された時に実行したい関数を登録するためのメソッドです。
-	// // 使い方: addValueChangedCallback(callback) メソッドに実行したい関数 callback を引数として渡します。関数は valueChangedCallbacks 配列に追加されます。
-	// // 処理内容: callback 関数を valueChangedCallbacks 配列に追加することで、値の変更を検知した時に実行したい関数を複数登録することができます。
-  // addValueChangedCallback(callback) {
-		
-  //   this.valueChangedCallbacks.push(callback);
-  // }
-
-
-	// // 要約！登録されたコールバック関数を呼び出すためのもの
-	// // 目的: 登録されたコールバック関数を呼び出し、値の変更を通知するためのメソッドです。
-	// // 使い方: dispatchValueChangedEvent() メソッドを呼び出すことで、valueChangedCallbacks 配列に登録されているコールバック関数が順に実行されます。
-	// // 処理内容: valueChangedCallbacks 配列内の各コールバック関数に対してループを実行し、それぞれの関数を引数 this.value（値の変更を検知した際の最新の値）と共に呼び出します。これにより、値が変更されたことを通知するための処理を実行します。
-  // dispatchValueChangedEvent() {
-  //   for (const callback of this.valueChangedCallbacks) {
-  //     callback(this.value);
-  //   }
-	// 	console.log("this.valueChangedCallbacks : ", this.valueChangedCallbacks);
-  // }
 
 
 

@@ -226,7 +226,7 @@
 
 				// 新しく3Dモデルを表示する際、表示済みの3Dモデルを消す
 				function loadModel1() {
-					// if (currentModel1) scene.remove(currentModel1); // 既存のモデルを削除
+					if (currentModel1) scene.remove(currentModel1); // 既存のモデルを削除
 
 					const loader = new GLTFLoader();
 
@@ -310,37 +310,35 @@
 				// ボタンによる制御
 				// 3Dモデル表示関数無効(loadModel2 : medium)
 				const toggleButton = document.getElementById('toggleButton');
-				let isEventListenerActive = true;	 	// 初期値をtrueに設定
+				// let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
 				toggleButton.addEventListener('click', () => {
-
-					// value の値を表示
-					console.log('value:', arButton.value);
-					console.log('クリック a:', arButton.a);
 					console.log('クリック q:', ARButton.q);
-
-
-
-
-
-					// メソッドを呼び出す
-
-					console.log('クリック k:', arButton.k);
-
-
-
-
 					
-					if (isEventListenerActive) {
+					// if (isEventListenerActive) {
+					// 	controller.removeEventListener('select', loadModel2);
+					// 	isEventListenerActive = false;
+					// 	toggleButton.textContent = 'ボタン (無効)';
+					// } else {
+					// 	controller.addEventListener('select', loadModel2);
+					// 	isEventListenerActive = true;
+					// 	toggleButton.textContent = 'ボタン (有効)';
+					// }
+				});
+				
+
+
+				// 初期 表示
+				let isEventListenerActive = true;	 	// 初期値をtrueに設定
+
+				// 有効無効ボタンによる3Dモデル表示非表示制御
+				if (ARButton.q) {
 						controller.removeEventListener('select', loadModel2);
 						isEventListenerActive = false;
-						toggleButton.textContent = 'ボタン (無効)';
 					} else {
 						controller.addEventListener('select', loadModel2);
 						isEventListenerActive = true;
-						toggleButton.textContent = 'ボタン (有効)';
 					}
-				});
 
 
 
