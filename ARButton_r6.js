@@ -1,7 +1,7 @@
 // r5
 class ARButton {
 	// 追加
-	static q = 0;
+	static q = 1;	//初期有効
 
 
 
@@ -75,16 +75,28 @@ class ARButton {
 						ARButton.q = 1;
 						button_test1.textContent = 'ボタン (有効)'; // ボタンのテキストを設定
 						console.log("true ARButton.q : ", ARButton.q);
+						
+						// ARButton.q の値が変更されたときにイベントを発火する
+						fireARButtonQChangedEvent();
 					}
 					else
 					{
 						ARButton.q = 0;
 						console.log("else ARButton.q : ", ARButton.q);
 						button_test1.textContent = 'ボタン (無効)'; // ボタンのテキストを設定
+
+						// ARButton.q の値が変更されたときにイベントを発火する
+						fireARButtonQChangedEvent();
 					}
 				});
 
 
+
+				// ARButton.q の値が変更されたときにイベントを発火する
+				function fireARButtonQChangedEvent() {
+					const arButtonQChangedEvent = new Event('arButtonQChanged');
+					document.dispatchEvent(arButtonQChangedEvent);
+				}
 
 				
 

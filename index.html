@@ -309,24 +309,41 @@
 				
 
 				
-				// 有効無効ボタンによる3Dモデル表示非表示制御
-				if (ARButton.q === 0) {
-					controller.removeEventListener('select', loadModel2);
+				// // 有効無効ボタンによる3Dモデル表示非表示制御
+				// if (ARButton.q === 0) {
+				// 	controller.removeEventListener('select', loadModel2);
 
-					// 確認用
-					toggleButton.textContent = 'ボタン (無効)';
-					console.log('確認 0');
-				} else {
-					controller.addEventListener('select', loadModel2);
+				// 	// 確認用
+				// 	toggleButton.textContent = 'ボタン (無効)';
+				// 	console.log('確認 0');
+				// } else {
+				// 	controller.addEventListener('select', loadModel2);
 
-					// 確認用
-					toggleButton.textContent = 'ボタン (有効)';
-					console.log('確認 1');
+				// 	// 確認用
+				// 	toggleButton.textContent = 'ボタン (有効)';
+				// 	console.log('確認 1');
+				// }
+
+
+
+				// カスタムイベントを受け取って条件を再評価する
+				function handleARButtonQChangedEvent() {
+					if (ARButton.q === 0) {
+						controller.removeEventListener('select', loadModel2);
+						toggleButton.textContent = 'ボタン (無効)';
+						console.log('確認 0');
+					} else {
+						controller.addEventListener('select', loadModel2);
+						toggleButton.textContent = 'ボタン (有効)';
+						console.log('確認 1');
+					}
 				}
 
-
-
+				// カスタムイベントを監視して、ARButton.q の値に応じて条件を再評価する
+				document.addEventListener('arButtonQChanged', handleARButtonQChangedEvent);
 				
+
+
 
 
 
