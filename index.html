@@ -309,45 +309,45 @@
 				
 
 				
-				// // 有効無効ボタンによる3Dモデル表示非表示制御
-				// if (ARButton.q == 0) {
-				// 	controller.removeEventListener('select', loadModel2);
+				// 有効無効ボタンによる3Dモデル表示非表示制御
+				if (ARButton.q == 0) {
+					controller.removeEventListener('select', loadModel2);
 
-				// 	// 確認用
-				// 	toggleButton.textContent = 'ボタン (無効)';
-				// } else {
-				// 	controller.addEventListener('select', loadModel2);
+					// 確認用
+					toggleButton.textContent = 'ボタン (無効)';
+				} else {
+					controller.addEventListener('select', loadModel2);
 
-				// 	// 確認用
-				// 	toggleButton.textContent = 'ボタン (有効)';
-				// }
-
-
+					// 確認用
+					toggleButton.textContent = 'ボタン (有効)';
+				}
 
 
 
 
 
-				// ボタンによる制御
-				// 3Dモデル表示関数無効(loadModel2 : medium)
-				let isEventListenerActive = true;	 	// モデル表示の初期値をtrue(表示)に設定
 
 
-				const toggleButton = document.getElementById('toggleButton');				
+				// // ボタンによる制御
+				// // 3Dモデル表示関数無効(loadModel2 : medium)
+				// let isEventListenerActive = true;	 	// モデル表示の初期値をtrue(表示)に設定
 
-				toggleButton.addEventListener('click', () => {
-					console.log('クリック q:', ARButton.q);
+
+				// const toggleButton = document.getElementById('toggleButton');				
+
+				// toggleButton.addEventListener('click', () => {
+				// 	console.log('クリック q:', ARButton.q);
 					
-					if (isEventListenerActive) {
-						controller.removeEventListener('select', loadModel2);
-						isEventListenerActive = false;
-						toggleButton.textContent = 'ボタン (無効)';
-					} else {
-						controller.addEventListener('select', loadModel2);
-						isEventListenerActive = true;
-						toggleButton.textContent = 'ボタン (有効)';
-					}
-				});
+				// 	if (isEventListenerActive) {
+				// 		controller.removeEventListener('select', loadModel2);
+				// 		isEventListenerActive = false;
+				// 		toggleButton.textContent = 'ボタン (無効)';
+				// 	} else {
+				// 		controller.addEventListener('select', loadModel2);
+				// 		isEventListenerActive = true;
+				// 		toggleButton.textContent = 'ボタン (有効)';
+				// 	}
+				// });
 				
 
 
