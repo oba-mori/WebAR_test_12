@@ -50,7 +50,7 @@ class ARButton {
 		
 
 
-		const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
+		// const arButton = new ARButton(); // ARButton クラスのインスタンスを作成
 		
 
 		// ボタンをbody要素に追加
@@ -128,7 +128,7 @@ class ARButton {
 				// ボタンクリックイベント
 				button_test1.addEventListener('click', () => {
 					//変数値を変更する関数
-					arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
+					// arButton.incrementValue(); // arButton インスタンスのメソッドを呼び出す
 
 					// //表示
 					// console.log('ボタンクリック後の値:', arButton.value);
@@ -340,6 +340,7 @@ class ARButton {
 	
 	
 
+	
 
 
 	//クリックした時にこの関数が処理される
