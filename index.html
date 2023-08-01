@@ -224,7 +224,7 @@
 
 				// 新しく3Dモデルを表示する際、表示済みの3Dモデルを消す
 				function loadModel1() {
-					// if (currentModel1) scene.remove(currentModel1); // 既存のモデルを削除
+					if (currentModel1) scene.remove(currentModel1); // 既存のモデルを削除
 
 					const loader = new GLTFLoader();
 
