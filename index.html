@@ -1,6 +1,11 @@
 <!-- 
 	WebAR_test_12
 
+	index_r6 : ARButton_r6.js 用
+
+
+	
+
 	ソースコードを参考にGLTF形式の3Dモデルを取り込み表示
 	hittest
 	平面を検知して、画面をタップした時に、サークルの位置に3Dモデルが表示される
@@ -107,7 +112,7 @@
 			import { GLTFLoader } from './GLTFLoader.js';
 
 			// import { ARButton } from 'three/addons/webxr/ARButton.js';
-			import { ARButton } from './ARButton.js';
+			import { ARButton } from './ARButton_r6.js';
 
 
 
@@ -123,12 +128,25 @@
 			let hitTestSourceRequested = false;
 
 
+
+			// ARButton クラスのインスタンスを作成
+			// const arButton = new ARButton();
+			let arButton;
+
+			arButton = new ARButton();
+
+
+
 			// 関数読み込み
 			init();
 			animate();
 
 
 			function init() {
+
+
+
+
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
@@ -290,19 +308,41 @@
 				// ボタンによる制御
 				// 3Dモデル表示関数無効(loadModel2 : medium)
 				const toggleButton = document.getElementById('toggleButton');
+				// let isEventListenerActive = true;	 	// 初期値をtrueに設定
+
+				toggleButton.addEventListener('click', () => {
+					console.log('クリック q:', ARButton.q);
+					
+					// if (isEventListenerActive) {
+					// 	controller.removeEventListener('select', loadModel2);
+					// 	isEventListenerActive = false;
+					// 	toggleButton.textContent = 'ボタン (無効)';
+					// } else {
+					// 	controller.addEventListener('select', loadModel2);
+					// 	isEventListenerActive = true;
+					// 	toggleButton.textContent = 'ボタン (有効)';
+					// }
+				});
+				
+
+
+				// 初期 表示
 				let isEventListenerActive = true;	 	// 初期値をtrueに設定
 
-				toggleButton.addEventListener('click', () => {					
-					if (isEventListenerActive) {
-						controller.removeEventListener('select', loadModel2);
-						isEventListenerActive = false;
-						toggleButton.textContent = 'ボタン (無効)';
-					} else {
-						controller.addEventListener('select', loadModel2);
-						isEventListenerActive = true;
-						toggleButton.textContent = 'ボタン (有効)';
-					}
-				});
+				// // 有効無効ボタンによる3Dモデル表示非表示制御
+				// if (ARButton.q == 0) {
+				// 		controller.removeEventListener('select', loadModel2);
+				// 		isEventListenerActive = false;
+
+				// 		// 確認用
+				// 		toggleButton.textContent = 'ボタン (無効)';
+				// 	} else {
+				// 		controller.addEventListener('select', loadModel2);
+				// 		isEventListenerActive = true;
+
+				// 		// 確認用
+				// 		toggleButton.textContent = 'ボタン (有効)';
+				// 	}
 
 
 
