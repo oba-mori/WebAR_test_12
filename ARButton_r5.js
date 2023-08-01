@@ -350,6 +350,10 @@ class ARButton {
 		this.a = this.a + 1;
 		console.log("AR this.a : ", this.a);
 
+		ARButton.q = ARButton.q + 1;
+		console.log("AR q : ", ARButton.q);
+		
+
 		if (this.value == 0)
 		{
   	  this.value = 1;
